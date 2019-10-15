@@ -4,7 +4,7 @@
 # JSON Template File: templates/angular-on-nginx/angular-on-nginx-deploy.json
 #=========================================================
 # NAME=angular-on-nginx
-# IMAGE_NAMESPACE=jag-csb-jes-family-protection-order-tools
+# IMAGE_NAMESPACE=lclymn-tools
 # REAL_IP_FROM=172.51.0.0/16
 # API_URL=https://django-jag-csb-jes-family-protection-order.pathfinder.gov.bc.ca/api/v1/
 # API_SERVICE_NAME=django
