@@ -45,6 +45,9 @@ To build the images run:
 
 If you get errors during the build that references scripts such as the following, check the line endings of your local copy of the file.  Replace `CRLF` line endings with `LF` and rebuild the image.
 
+If you are using __vscode__ as your IDE, there is a great extension which visualizes lineendings called `Render CRLF Line Endings`. Install it and follow its instructions to view line endings
+
+To change line endings you can view this [gif](./changing-lf-crlf.gif)
 The `.gitattributes` file for the project has been updated, but if your local copy predates the update, your files may still be affected.
 
 ```
