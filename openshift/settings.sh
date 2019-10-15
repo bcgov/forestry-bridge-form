@@ -1,12 +1,12 @@
 # bash script to be sourced to set environment variables for OpenShift scripts
-export PROJECT_NAMESPACE="jag-csb-jes-family-protection-order"
+export PROJECT_NAMESPACE="lclymn"
 export PROJECT_OS_DIR=${PROJECT_OS_DIR:-../../openshift}
 
 # The templates that should not have their GIT referances(uri and ref) over-ridden
 # Templates NOT in this list will have they GIT referances over-ridden
 # with the values of GIT_URI and GIT_REF
 export skip_git_overrides="schema-spy-build.json"
-export GIT_URI="https://github.com/bcgov/Family-Protection-Order.git"
+export GIT_URI="https://github.com/bcgov/Forester-Job-Placement.git"
 export GIT_REF="master"
 
 # The project components
