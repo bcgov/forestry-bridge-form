@@ -75,7 +75,7 @@ build-web() {
   echo -e "----------------------------------------------------------------------------------------------------"
   ${S2I_EXE} build \
     '../fpo-web' \
-    'centos/nodejs-6-centos7:6' \
+    'centos/nodejs-10-centos7:10' \
     'angular-app'
   echo -e "===================================================================================================="
 
@@ -98,7 +98,7 @@ build-web-dev() {
   ${S2I_EXE} build \
     -e "DEV_MODE=true" \
     '../fpo-web' \
-    'centos/nodejs-6-centos7:6' \
+    'centos/nodejs-10-centos7:10' \
     'fpo-angular-dev'
 
   #docker build \
