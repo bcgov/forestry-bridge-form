@@ -4,9 +4,9 @@
 # JSON Template File: templates/django/django-deploy.json
 #=========================================================
 # NAME=django
-# IMAGE_NAMESPACE=jag-csb-jes-family-protection-order-tools
+# IMAGE_NAMESPACE=lclymn-tools
 # MEMORY_LIMIT=512Mi
-APPLICATION_DOMAIN=django-jag-csb-jes-family-protection-order-dev.pathfinder.gov.bc.ca
+APPLICATION_DOMAIN=django-lclymn-dev.pathfinder.gov.bc.ca
 # DATABASE_SERVICE_NAME=postgresql
 # DATABASE_ENGINE=postgresql
 # DATABASE_NAME=FPO_Database
