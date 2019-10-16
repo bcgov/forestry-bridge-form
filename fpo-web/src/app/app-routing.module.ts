@@ -45,7 +45,7 @@ const routes: Routes = [
     path: 'glossary-editor',
     redirectTo: 'prv/glossary-editor'
   },
-  // {  //commenting out unnecessary router for our current main goal.
+  // {  //This route has been disabled. It is a feature that was apart of the originating fork of the repo [https://github.com/bcgov/Family-Protection-Order] and is not being leveraged. The route exposes a feature of glossary-editor that allows user to edit glossary definary that used in survey.
   //   path: 'prv/glossary-editor',
   //   component: GlossaryEditorComponent,
   //   data: {

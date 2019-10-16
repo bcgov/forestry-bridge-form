@@ -2,7 +2,7 @@
 Forester-Job-Placement Order Form
 
 __This is a fork version for [Family-Protection-Order]( https://github.com/bcgov/Family-Protection-Order )__
-__If you want to have more feature for application, please  original repo__
+__Many of the originating features have been stripped or commented out. The database has been disconnected. As a maintainer of this project you should periodically refer to the originating fork to see if there are changes that you may want to include into this repository.__
 
 ## Structure
 
