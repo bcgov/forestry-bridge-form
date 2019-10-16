@@ -427,11 +427,12 @@ export class SurveyPrimaryComponent implements OnInit {
 
         this.resultJson = JSON.stringify(data);
 
-        console.log("resultJson is: " + this.resultJson);
+        // console.log("resultJson is: " + this.resultJson);
 
         this.resultJson = JSON.stringify(data);
         this.jsonObject = JSON.parse(this.resultJson);
 
         this.printUrl = this.dataService.getApiUrl('survey-print/' + this.cacheName);
+        // this.printUrl = 'http://0.0.0.0:8080/protection-order/api/survey-print/primary';
     }
 }
