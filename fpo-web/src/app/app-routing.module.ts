@@ -16,18 +16,6 @@ const routes: Routes = [
     //children: []
     component: HomeComponent
   },
-  // {
-  //   path: 'qualify',
-  //   component: SurveyPrimaryComponent,
-  //   resolve: {
-  //     // survey: SurveyResolver,
-  //   },
-  //   data: {
-  //     breadcrumb: 'Prequalification Survey',
-  //     survey_path: 'assets/survey-qualify.json',
-  //     show_sidebar: false,
-  //   }
-  // },
   {
     path: 'prv',
     redirectTo: 'prv/survey'
@@ -57,7 +45,7 @@ const routes: Routes = [
     path: 'glossary-editor',
     redirectTo: 'prv/glossary-editor'
   },
-  // {
+  // {  //commenting out unnecessary router for our current main goal.
   //   path: 'prv/glossary-editor',
   //   component: GlossaryEditorComponent,
   //   data: {
