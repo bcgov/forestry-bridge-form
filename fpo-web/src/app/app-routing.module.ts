@@ -101,6 +101,12 @@ const routes: Routes = [
       show_sidebar: true,
     }
   },
+  {
+    // wildcard route
+    path: '**',
+    redirectTo: '/',
+    pathMatch: 'full'
+  }
 ];
 
 @NgModule({
