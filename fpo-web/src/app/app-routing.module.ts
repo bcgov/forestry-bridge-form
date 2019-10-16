@@ -16,18 +16,18 @@ const routes: Routes = [
     //children: []
     component: HomeComponent
   },
-  {
-    path: 'qualify',
-    component: SurveyPrimaryComponent,
-    resolve: {
-      // survey: SurveyResolver,
-    },
-    data: {
-      breadcrumb: 'Prequalification Survey',
-      survey_path: 'assets/survey-qualify.json',
-      show_sidebar: false,
-    }
-  },
+  // {
+  //   path: 'qualify',
+  //   component: SurveyPrimaryComponent,
+  //   resolve: {
+  //     // survey: SurveyResolver,
+  //   },
+  //   data: {
+  //     breadcrumb: 'Prequalification Survey',
+  //     survey_path: 'assets/survey-qualify.json',
+  //     show_sidebar: false,
+  //   }
+  // },
   {
     path: 'prv',
     redirectTo: 'prv/survey'
@@ -57,13 +57,13 @@ const routes: Routes = [
     path: 'glossary-editor',
     redirectTo: 'prv/glossary-editor'
   },
-  {
-    path: 'prv/glossary-editor',
-    component: GlossaryEditorComponent,
-    data: {
-      breadcrumb: 'Glossary Editor',
-    }
-  },
+  // {
+  //   path: 'prv/glossary-editor',
+  //   component: GlossaryEditorComponent,
+  //   data: {
+  //     breadcrumb: 'Glossary Editor',
+  //   }
+  // },
   {
     path: 'survey-editor',
     redirectTo: 'prv/survey-editor'
