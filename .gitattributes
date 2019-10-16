@@ -2,8 +2,8 @@
 * text=auto
 
 # Declare files that will always have LF line endings on checkout.
-*.sh text eol=crlf
-*.md text eol=crlf
-*.json text eol=crlf
-**/s2i/bin/* text eol=crlf
-**/root/**/* text eol=crlf
+*.sh text eol=lf
+*.md text eol=lf
+*.json text eol=lf
+**/s2i/bin/* text eol=lf
+**/root/**/* text eol=lf
