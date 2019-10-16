@@ -54,6 +54,7 @@
         "strategy": {
           "type": "Docker",
           "dockerStrategy": {
+            "noCache": true,
             "from": {
               "kind": "ImageStreamTag",
               "namespace": "${RUNTIME_IMAGE_NAMESPACE}",
