@@ -2,7 +2,8 @@
 
 ## Overview
 
-The API provides an interface into the database for Family Protection Order.
+The API currently does __not__ interface with the database now,database component is based off of the Family Protection Order repo.
+The API is developed in Django/Python, using a Visual Studio 2017 project.
 
 ## Development
 
@@ -10,10 +11,8 @@ The API is developed in Django/Python, using a Visual Studio 2017 project.
 
 ## Development Deployment Environment
 
-To deploy Family Protection Order on an instance of OpenShift, see [the instructions](../RunningLocal.md) in the file RunningLocal.md.
+To deploy Forester-Job-Placement Order on an instance of OpenShift, see [the instructions](../RunningLocal.md) in the file RunningLocal.md.
 
-- [Schema Spy](http://schema-spy-jag-csb-jes-family-protection-order.pathfinder.gov.bc.ca/)
-- [Open API (Swagger) API Explorer](http://django-jag-csb-jes-family-protection-order.pathfinder.gov.bc.ca/api/v1/)
 
 ## Database Migrations
 
