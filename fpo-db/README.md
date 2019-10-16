@@ -2,7 +2,7 @@
 
 ## Overview
 
-Forester-Job-Placement Order DB is used to store ...
+Forester-Job-Placement Order database is not leveraged at this time, this component is based off of the Family Protection Order repo as a fork
 
 ## Development
 

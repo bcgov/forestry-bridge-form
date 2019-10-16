@@ -7,7 +7,7 @@ The API is developed in Django/Python, using a Visual Studio 2017 project.
 
 ## Development
 
-The API is developed in Django/Python, using a Visual Studio 2017 project.
+The API is developed in Django/Python
 
 ## Development Deployment Environment
 
