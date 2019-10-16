@@ -229,10 +229,7 @@ export class SurveyComponent  {
   }
 
   doneLoadCache(response) {
-    if(response && response.accept_terms) {
-      this._router.navigate(['/prv/status']);
-    }
-    else if(response && response.result) {
+    if(response && response.result) {
       let cache = response.result;
       if(cache.data) {
         let prevPg = this.surveyModel.currentPageNo;

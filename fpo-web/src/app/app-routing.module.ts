@@ -17,18 +17,6 @@ const routes: Routes = [
     component: HomeComponent
   },
   {
-    path: 'qualify',
-    component: SurveyPrimaryComponent,
-    resolve: {
-      // survey: SurveyResolver,
-    },
-    data: {
-      breadcrumb: 'Prequalification Survey',
-      survey_path: 'assets/survey-qualify.json',
-      show_sidebar: false,
-    }
-  },
-  {
     path: 'prv',
     redirectTo: 'prv/survey'
   },
@@ -57,13 +45,13 @@ const routes: Routes = [
     path: 'glossary-editor',
     redirectTo: 'prv/glossary-editor'
   },
-  {
-    path: 'prv/glossary-editor',
-    component: GlossaryEditorComponent,
-    data: {
-      breadcrumb: 'Glossary Editor',
-    }
-  },
+  // {  //This route has been disabled. It is a feature that was apart of the originating fork of the repo [https://github.com/bcgov/Family-Protection-Order] and is not being leveraged. The route exposes a feature of glossary-editor that allows user to edit glossary definary that used in survey.
+  //   path: 'prv/glossary-editor',
+  //   component: GlossaryEditorComponent,
+  //   data: {
+  //     breadcrumb: 'Glossary Editor',
+  //   }
+  // },
   {
     path: 'survey-editor',
     redirectTo: 'prv/survey-editor'
@@ -113,6 +101,12 @@ const routes: Routes = [
       show_sidebar: true,
     }
   },
+  {
+    // wildcard route
+    path: '**',
+    redirectTo: '/',
+    pathMatch: 'full'
+  }
 ];
 
 @NgModule({
