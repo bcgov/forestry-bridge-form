@@ -433,6 +433,11 @@ export class SurveyPrimaryComponent implements OnInit {
         this.jsonObject = JSON.parse(this.resultJson);
 
         this.printUrl = this.dataService.getApiUrl('survey-print/' + this.cacheName);
+<<<<<<< Updated upstream
         // this.printUrl = 'http://0.0.0.0:8080/protection-order/api/survey-print/primary'; //developing environment variable
+=======
+        //this.printUrl = 'http://0.0.0.0:8080/protection-order/api/survey-print/primary'; //developing environment variable
+        console.log('I am herere', this.printUrl);
+>>>>>>> Stashed changes
     }
 }
