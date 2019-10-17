@@ -169,12 +169,40 @@
                     "value": "${DJANGO_DEBUG}"
                   },
                   {
+<<<<<<< HEAD
                     "name": "PDF_SERVICE_URL",
                     "value": "${PDF_SERVICE_URL}"
                   },
                   {
                     "name": "WEB_CONCURRENCY",
                     "value": "${WEB_CONCURRENCY}"
+=======
+                    "name": "EMAIL_HOST",
+                    "valueFrom": {
+                      "secretKeyRef": {
+                        "name": "${DJANGO_EMAIL_SECRET_NAME}",
+                        "key": "EMAIL_HOST"
+                      }
+                    }
+                  },
+                  {
+                    "name": "EMAIL_PORT",
+                    "valueFrom": {
+                      "secretKeyRef": {
+                        "name": "${DJANGO_EMAIL_SECRET_NAME}",
+                        "key": "EMAIL_PORT"
+                      }
+                    }
+                  },
+                  {
+                    "name": "EMAIL_SENDER",
+                    "valueFrom": {
+                      "secretKeyRef": {
+                        "name": "${DJANGO_EMAIL_SECRET_NAME}",
+                        "key": "EMAIL_SENDER"
+                      }
+                    }
+>>>>>>> update deploy with email secret credentials
                   }
                 ],
                 "resources": {
