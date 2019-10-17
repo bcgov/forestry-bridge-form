@@ -186,14 +186,14 @@
                     "value": "${DJANGO_DEBUG}"
                   },
                   {
-<<<<<<< HEAD
                     "name": "PDF_SERVICE_URL",
                     "value": "${PDF_SERVICE_URL}"
                   },
                   {
                     "name": "WEB_CONCURRENCY",
                     "value": "${WEB_CONCURRENCY}"
-=======
+                  },
+                  {
                     "name": "EMAIL_HOST",
                     "valueFrom": {
                       "secretKeyRef": {
@@ -219,7 +219,6 @@
                         "key": "EMAIL_SENDER"
                       }
                     }
->>>>>>> update deploy with email secret credentials
                   }
                 ],
                 "resources": {

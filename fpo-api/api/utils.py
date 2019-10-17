@@ -2,13 +2,6 @@ from django.core.mail import EmailMessage
 import uuid
 import base64
 
-## sends an email
-## TODO: enable adding of email attachments via an argument
-def sendEmail(messageBody, subject, toEmail):
-  msg = EmailMessage(subject, messageBody, toEmail)
-  msg.send()
-
-
 def getConfirmationMessageBody():
   return """
     Hello, 
@@ -24,3 +17,7 @@ def getConfirmationMessageSubject(trackingCode):
 def generateCompressedTrackingCode():
   return base64.urlsafe_b64encode(uuid.uuid1().bytes).rstrip(b'=').decode('ascii').upper()
 
+def getPDFFilename(trackingCode):
+  # a better place for formatting a filename should be within a configuartion file like a 
+  # pdf.config.json
+  return "Job-Matching-" + trackingCode + '.pdf'

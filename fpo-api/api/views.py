@@ -35,7 +35,10 @@ from . import serializers
 from api.auth import SiteMinderAuth
 from api.models import User
 from api.pdf import render as render_pdf
-from api.utils import sendEmail, getConfirmationMessageBody, getConfirmationMessageSubject, generateCompressedTrackingCode
+from api.utils import sendEmail, 
+    getConfirmationMessageBody, getConfirmationMessageSubject, 
+    generateCompressedTrackingCode, getPDFFilename
+from django.core.mail import EmailMessage
 
 class AcceptTermsView(APIView):
     permission_classes = (permissions.IsAuthenticated,)
@@ -73,6 +76,16 @@ class SurveyPdfView(generics.GenericAPIView):
     def post(self, request, name=None):
         tpl_name = 'survey-{}.html'.format(name)
         #return HttpResponseBadRequest('Unknown survey name')
+        # tracking code is used by forestry job placement workers to track submissions
+        # this code is also sent back to the user so that they can refer to it later
+        tracking_code = generateCompressedTrackingCode()
+        # where the pdf is sent too
+        email_inbox = os.getenv('EMAIL_INBOX')
+
+        subject = getConfirmationMessageSubject(tracking_code)
+        messageBody = getConfirmationMessageBody()
+         
+        email = EmailMessage(subject, messageBody, [email_inbox])
 
         responses = json.loads(request.POST['data'])
         # responses = {'question1': 'test value'}
@@ -89,9 +102,11 @@ class SurveyPdfView(generics.GenericAPIView):
         else:
             pdf_content = render_pdf(html_content)
 
-        response = HttpResponse(content_type='application/pdf')
-        response['Content-Disposition'] = 'attachment; filename="report.pdf"'
+        file_name = getPDFFilename(tracking_code)
+        email.attach(file_name, pdf_content, 'application/pdf')
 
-        response.write(pdf_content)
+        # send email
+        email.send()
 
-        return response
+
+        return JsonResponse({'ok': True, 'tracking_code': tracking_code})
