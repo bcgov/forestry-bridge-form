@@ -46,27 +46,27 @@
                             "isRequired": true,
                             "choices": [
                                 {
-                                    "value": "item1",
+                                    "value": "Some high school",
                                     "text": "Some high school"
                                 },
                                 {
-                                    "value": "item2",
+                                    "value": "Grade 12 or GED",
                                     "text": "Grade 12 or GED"
                                 },
                                 {
-                                    "value": "item3",
+                                    "value": "Some post-secondary",
                                     "text": "Some post-secondary"
                                 },
                                 {
-                                    "value": "item5",
+                                    "value": "Trades Qualification",
                                     "text": "Trades Qualification"
                                 },
                                 {
-                                    "value": "item6",
+                                    "value": "Post-secondary diploma/degree",
                                     "text": "Post-secondary diploma/degree"
                                 },
                                 {
-                                    "value": "item7",
+                                    "value": "Apprentice",
                                     "text": "Apprentice"
                                 }
                             ],
@@ -74,31 +74,34 @@
                         },
                         {
                             "type": "text",
-                            "name": "question1",
+                            "name": "Area",
                             "visible": false,
-                            "visibleIf": "{ApplicantEducation} contains \"item6\"",
-                            "title": "Area:"
+                            "visibleIf": "{ApplicantEducation} contains \"Post-secondary diploma/degree\"",
+                            "title": "Area:",
+                            "isRequired": true
                         },
                         {
                             "type": "text",
-                            "name": "question2",
+                            "name": "Which trades",
                             "visible": false,
-                            "visibleIf": "{ApplicantEducation} contains \"item5\"",
-                            "title": "Which trade(s)?"
+                            "visibleIf": "{ApplicantEducation} contains \"Trades Qualification\"",
+                            "title": "Which trade(s)?",
+                            "isRequired": true
                         },
                         {
                             "type": "multipletext",
-                            "name": "question3",
+                            "name": "ApprenticeCertification",
                             "visible": false,
-                            "visibleIf": "{ApplicantEducation} contains \"item7\"",
+                            "visibleIf": "{ApplicantEducation} contains \"Apprentice\"",
                             "title": "Apprentince certification:",
+                            "isRequired": true,
                             "items": [
                                 {
-                                    "name": "text1",
+                                    "name": "Trade:",
                                     "title": "Trade:"
                                 },
                                 {
-                                    "name": "text2",
+                                    "name": "Trade:",
                                     "title": "Year:"
                                 }
                             ]
@@ -144,59 +147,59 @@
                         },
                         {
                             "type": "text",
-                            "name": "Exp(years)",
+                            "name": "YearsofExp",
                             "width": "50%",
                             "title": "Years of forestry experience:",
                             "isRequired": true
                         },
                         {
                             "type": "checkbox",
-                            "name": "Equiment(s)Trained",
+                            "name": "EquimentsTrained",
                             "title": "Equipment trained or certified to operate (at current or previous operations)",
                             "isRequired": true,
                             "choices": [
                                 {
-                                    "value": "item1",
+                                    "value": "ATL",
                                     "text": "ATL"
                                 },
                                 {
-                                    "value": "item2",
+                                    "value": "Grader",
                                     "text": "Grader"
                                 },
                                 {
-                                    "value": "item3",
+                                    "value": "Dozer",
                                     "text": "Dozer"
                                 },
                                 {
-                                    "value": "item4",
+                                    "value": "Excavat",
                                     "text": "Excavat"
                                 },
                                 {
-                                    "value": "item5",
+                                    "value": "Crane",
                                     "text": "Crane"
                                 },
                                 {
-                                    "value": "item6",
+                                    "value": "Small Forklift",
                                     "text": "Small Forklift"
                                 },
                                 {
-                                    "value": "item7",
+                                    "value": "Forklift Yard",
                                     "text": "Forklift Yard"
                                 },
                                 {
-                                    "value": "item8",
+                                    "value": "Grapple Loader Log Yard",
                                     "text": "Grapple Loader Log Yard"
                                 },
                                 {
-                                    "value": "item9",
+                                    "value": "Bucket Loader",
                                     "text": "Bucket Loader"
                                 },
                                 {
-                                    "value": "item10",
+                                    "value": "Other",
                                     "text": "Other"
                                 },
                                 {
-                                    "value": "item11",
+                                    "value": "None of the above",
                                     "text": "None of the above"
                                 }
                             ],
@@ -204,10 +207,10 @@
                         },
                         {
                             "type": "text",
-                            "name": "question7",
+                            "name": "OtherEquipment",
                             "visible": false,
-                            "visibleIf": "{Equiment(s)Trained} contains \"item10\"",
-                            "title": "Other:"
+                            "visibleIf": "{EquimentsTrained} contains \"Other\"",
+                            "title": "Other Equipment:"
                         },
                         {
                             "type": "checkbox",
@@ -216,39 +219,35 @@
                             "isRequired": true,
                             "choices": [
                                 {
-                                    "value": "item1",
+                                    "value": "First Aid",
                                     "text": "First Aid"
                                 },
                                 {
-                                    "value": "item2",
+                                    "value": "Welding",
                                     "text": "Welding"
                                 },
                                 {
-                                    "value": "item3",
+                                    "value": "H2S Alive",
                                     "text": "H2S Alive"
                                 },
                                 {
-                                    "value": "item4",
-                                    "text": "WHMIS"
-                                },
-                                {
-                                    "value": "item5",
+                                    "value": "Confined Space Awareness",
                                     "text": "Confined Space Awareness"
                                 },
                                 {
-                                    "value": "item6",
+                                    "value": "Chain Saw Safety",
                                     "text": "Chain Saw Safety"
                                 },
                                 {
-                                    "value": "item7",
+                                    "value": "S-100 Basic Fire Suppression & Safety",
                                     "text": "S-100 Basic Fire Suppression & Safety"
                                 },
                                 {
-                                    "value": "item8",
+                                    "value": "S-185 Fire Suppression & Safety",
                                     "text": "S-185 Fire Suppression & Safety"
                                 },
                                 {
-                                    "value": "item9",
+                                    "value": "None of the above",
                                     "text": "None of the above"
                                 }
                             ],
@@ -256,15 +255,15 @@
                         },
                         {
                             "type": "text",
-                            "name": "question5",
-                            "visibleIf": "{Certifications} contains \"item1\"",
+                            "name": "FirstAidLevel",
+                            "visibleIf": "{Certifications} contains \"First Aid\"",
                             "title": "First Aid Level:",
                             "isRequired": true
                         },
                         {
                             "type": "text",
-                            "name": "question6",
-                            "visibleIf": "{Certifications} contains \"item2\"",
+                            "name": "WeldingLevel",
+                            "visibleIf": "{Certifications} contains \"Welding\"",
                             "title": "Welding Level:",
                             "isRequired": true
                         },
@@ -275,27 +274,27 @@
                             "isRequired": true,
                             "choices": [
                                 {
-                                    "value": "item1",
+                                    "value": "Planner",
                                     "text": "Planner"
                                 },
                                 {
-                                    "value": "item2",
+                                    "value": "Sawmill",
                                     "text": "Sawmill"
                                 },
                                 {
-                                    "value": "item3",
+                                    "value": "Log Yard",
                                     "text": "Log Yard"
                                 },
                                 {
-                                    "value": "item4",
+                                    "value": "Energy Plant",
                                     "text": "Energy Plant"
                                 },
                                 {
-                                    "value": "item5",
+                                    "value": "Kilns",
                                     "text": "Kilns"
                                 },
                                 {
-                                    "value": "item6",
+                                    "value": "None of the above",
                                     "text": "None of the above"
                                 }
                             ],
@@ -303,37 +302,37 @@
                         },
                         {
                             "type": "text",
-                            "name": "question10",
+                            "name": "YrsOfPlanner",
                             "visible": false,
-                            "visibleIf": "{ExperienceArea} contains \"item1\"",
+                            "visibleIf": "{ExperienceArea} contains \"Planner\"",
                             "title": "Planner: Number of Years",
                             "isRequired": true
                         },
                         {
                             "type": "text",
-                            "name": "question4",
+                            "name": "YrsOfSawmill",
                             "visible": false,
-                            "visibleIf": "{ExperienceArea} contains \"item2\"",
+                            "visibleIf": "{ExperienceArea} contains \"Sawmill\"",
                             "title": "Sawmill: Number of Years"
                         },
                         {
                             "type": "text",
-                            "name": "question11",
-                            "visibleIf": "{ExperienceArea} contains \"item3\"",
+                            "name": "YrsOfLogYard",
+                            "visibleIf": "{ExperienceArea} contains \"Log Yard\"",
                             "title": "Log Yard: Number of Years"
                         },
                         {
                             "type": "text",
-                            "name": "question13",
+                            "name": "YrsOfEngergyPlant",
                             "visible": false,
-                            "visibleIf": "{ExperienceArea} contains \"item4\"",
+                            "visibleIf": "{ExperienceArea} contains \"Energy Plant\"",
                             "title": "Energy Plant: Number of Years"
                         },
                         {
                             "type": "text",
-                            "name": "question14",
+                            "name": "YrsOfKilns",
                             "visible": false,
-                            "visibleIf": "{ExperienceArea} contains \"item5\"",
+                            "visibleIf": "{ExperienceArea} contains \"Kilns\"",
                             "title": "Kilns: Number of Years"
                         },
                         {
@@ -343,27 +342,27 @@
                             "isRequired": true,
                             "choices": [
                                 {
-                                    "value": "item1",
+                                    "value": "Class 5",
                                     "text": "Class 5"
                                 },
                                 {
-                                    "value": "item2",
+                                    "value": "Class 3",
                                     "text": "Class 3"
                                 },
                                 {
-                                    "value": "item3",
+                                    "value": "Class 1",
                                     "text": "Class 1"
                                 },
                                 {
-                                    "value": "item4",
+                                    "value": "Air Endorsement",
                                     "text": "Air Endorsement"
                                 },
                                 {
-                                    "value": "item5",
+                                    "value": "Other",
                                     "text": "Other"
                                 },
                                 {
-                                    "value": "item6",
+                                    "value": "None of the above",
                                     "text": "None of the above"
                                 }
                             ],
@@ -371,9 +370,9 @@
                         },
                         {
                             "type": "text",
-                            "name": "question9",
+                            "name": "OtherDrivingTraining",
                             "visible": false,
-                            "visibleIf": "{DrivingExp} contains [\"item5\"]",
+                            "visibleIf": "{DrivingExp} contains \"Other\"",
                             "title": "Other driving training:",
                             "isRequired": true
                         },
@@ -384,71 +383,71 @@
                             "isRequired": true,
                             "choices": [
                                 {
-                                    "value": "item1",
+                                    "value": "Lumber Stacker",
                                     "text": "Lumber Stacker"
                                 },
                                 {
-                                    "value": "item2",
+                                    "value": "J Bar Operator",
                                     "text": "J Bar Operator"
                                 },
                                 {
-                                    "value": "item3",
+                                    "value": "Chipper Operator",
                                     "text": "Chipper Operator"
                                 },
                                 {
-                                    "value": "item4",
+                                    "value": "Paint Booth",
                                     "text": "Paint Booth"
                                 },
                                 {
-                                    "value": "item5",
+                                    "value": "Edger Operator",
                                     "text": "Edger Operator"
                                 },
                                 {
-                                    "value": "item6",
+                                    "value": "Chip car Attendant",
                                     "text": "Chip car Attendant"
                                 },
                                 {
-                                    "value": "item7",
+                                    "value": "Tilt Host Feeder",
                                     "text": "Tilt Host Feeder"
                                 },
                                 {
-                                    "value": "item8",
+                                    "value": "Barker Operator",
                                     "text": "Barker Operator"
                                 },
                                 {
-                                    "value": "item9",
+                                    "value": "Logging Skidder",
                                     "text": "Logging Skidder"
                                 },
                                 {
-                                    "value": "item10",
+                                    "value": "Planer Feeder",
                                     "text": "Planer Feeder"
                                 },
                                 {
-                                    "value": "item11",
+                                    "value": "Clean Up",
                                     "text": "Clean Up"
                                 },
                                 {
-                                    "value": "item12",
+                                    "value": "Log Processer",
                                     "text": "Log Processer"
                                 },
                                 {
-                                    "value": "item13",
+                                    "value": "Lumber Grader/Trimmer",
                                     "text": "Lumber Grader/Trimmer"
                                 },
                                 {
-                                    "value": "item14",
+                                    "value": "General Labour",
                                     "text": "General Labour"
                                 },
                                 {
-                                    "value": "item15",
+                                    "value": "Head Rig Operator",
                                     "text": "Head Rig Operator"
                                 },
                                 {
-                                    "value": "item16",
+                                    "value": "Other",
                                     "text": "Other"
                                 },
                                 {
-                                    "value": "item17",
+                                    "value": "None of the above",
                                     "text": "None of the above"
                                 }
                             ],
@@ -456,56 +455,56 @@
                         },
                         {
                             "type": "text",
-                            "name": "question12",
+                            "name": "OtherSawmillTraining",
                             "visible": false,
-                            "visibleIf": "{SawmillTrained} contains [\"item16\"]",
+                            "visibleIf": "{SawmillTrained} contains \"Other\"",
                             "title": "Other training:",
                             "isRequired": true
                         },
                         {
                             "type": "checkbox",
-                            "name": "Hobbies_Interests",
+                            "name": "HobbiesInterests",
                             "title": "Do you have skills from your hobbies or interests that could be transferred to a new job or role, such as:",
                             "isRequired": true,
                             "choices": [
                                 {
-                                    "value": "item1",
+                                    "value": "Plumbing",
                                     "text": "Plumbing"
                                 },
                                 {
-                                    "value": "item2",
+                                    "value": "ELectrical",
                                     "text": "Electrical"
                                 },
                                 {
-                                    "value": "item3",
+                                    "value": "Carpentry",
                                     "text": "Carpentry"
                                 },
                                 {
-                                    "value": "item4",
+                                    "value": "Wood framing structures",
                                     "text": "Wood framing structures"
                                 },
                                 {
-                                    "value": "item5",
+                                    "value": "Automotive repair",
                                     "text": "Automotive repair"
                                 },
                                 {
-                                    "value": "item6",
+                                    "value": "Machinery repair",
                                     "text": "Machinery repair"
                                 },
                                 {
-                                    "value": "item7",
+                                    "value": "Welding",
                                     "text": "Welding"
                                 },
                                 {
-                                    "value": "item8",
+                                    "value": "Concrete",
                                     "text": "Concrete"
                                 },
                                 {
-                                    "value": "item9",
+                                    "value": "Other",
                                     "text": "Other"
                                 },
                                 {
-                                    "value": "item10",
+                                    "value": "None of the above",
                                     "text": "None of the above"
                                 }
                             ],
@@ -513,17 +512,17 @@
                         },
                         {
                             "type": "multipletext",
-                            "name": "question8",
+                            "name": "OtherTransferableSkills",
                             "visible": false,
-                            "visibleIf": "{Hobbies_Interests} contains [\"item9\"]",
+                            "visibleIf": "{HobbiesInterests} contains \"Other\"",
                             "title": "Other transferable skills:",
                             "items": [
                                 {
-                                    "name": "text1",
+                                    "name": "Other1",
                                     "title": "Other:"
                                 },
                                 {
-                                    "name": "text2",
+                                    "name": "Other2",
                                     "title": "Other:"
                                 }
                             ]
