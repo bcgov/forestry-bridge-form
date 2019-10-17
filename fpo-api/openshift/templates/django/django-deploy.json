@@ -11,6 +11,23 @@
   },
   "objects": [
     {
+      "apiVersion": "v1",
+      "kind": "ConfigMap",
+      "metadata": {
+          "labels": {
+              "app": "${NAME}"
+          },
+          "name": "${NAME}-api-email-config"
+      },
+      "data": {
+          "EMAIL_HOST": "${EMAIL_HOST}",
+          "EMAIL_PORT": "${EMAIL_PORT}",
+          "EMAIL_SENDER": "${EMAIL_SENDER}",
+          "EMAIL_INBOX": "${EMAIL_INBOX}"
+      },
+      "type": "Opaque"
+    },
+    {
       "kind": "Service",
       "apiVersion": "v1",
       "metadata": {
@@ -175,6 +192,42 @@
                   {
                     "name": "WEB_CONCURRENCY",
                     "value": "${WEB_CONCURRENCY}"
+                  },
+                  {
+                    "name": "EMAIL_HOST",
+                    "valueFrom": {
+                      "configMapKeyRef": {
+                        "name": "${NAME}-api-email-config",
+                        "key": "EMAIL_HOST"
+                      }
+                    }
+                  },
+                  {
+                    "name": "EMAIL_PORT",
+                    "valueFrom": {
+                      "configMapKeyRef": {
+                        "name": "${NAME}-api-email-config",
+                        "key": "EMAIL_PORT"
+                      }
+                    }
+                  },
+                  {
+                    "name": "EMAIL_SENDER",
+                    "valueFrom": {
+                      "configMapKeyRef": {
+                        "name": "${NAME}-api-email-config",
+                        "key": "EMAIL_SENDER"
+                      }
+                    }
+                  },
+                  {
+                    "name": "EMAIL_INBOX",
+                    "valueFrom": {
+                      "configMapKeyRef": {
+                        "name": "${NAME}-api-email-config",
+                        "key": "EMAIL_INBOX"
+                      }
+                    }
                   }
                 ],
                 "resources": {
@@ -284,6 +337,28 @@
       "description": "Value to control number of gunicorn workers.",
       "required": true,
       "value": "4"
+    },
+    {
+      "name": "EMAIL_HOST",
+      "displayName": "The smtp host",
+      "required": true
+    },
+    {
+      "name": "EMAIL_PORT",
+      "displayName": "SMTP host port",
+      "required": true,
+      "value": "25"
+    },
+    {
+      "name": "EMAIL_SENDER",
+      "displayName": "sender email address",
+      "required": true,
+      "value": "donotreply@gov.bc.ca"
+    },
+    {
+      "name": "EMAIL_INBOX",
+      "displayName": "sender email address",
+      "required": true
     }
   ]
 }

@@ -191,7 +191,9 @@ configureEnvironment () {
   export DJANGO_SECRET_KEY=wpn1GZrouOryH2FshRrpVHcEhMfMLtmTWMC2K5Vhx8MAi74H5y
   export DJANGO_DEBUG=True
   export DJANGO_LOG_LEVEL=${DJANGO_LOG_LEVEL-INFO}
-
+  export DJANGO_EMAIL_HOST=apps.smtp.gov.bc.ca
+  export DJANGO_EMAIL_PORT=25
+  export DJANGO_EMAIL_INBOX=${DJANGO_EMAIL_INBOX}
   # fpo-web
   export WEB_HTTP_PORT=${WEB_HTTP_PORT-8080}
   export API_URL=${API_URL-http://fpo-api:8080/api/v1/}

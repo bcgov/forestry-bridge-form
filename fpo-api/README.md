@@ -9,6 +9,7 @@ The API is developed in Django/Python, using a Visual Studio 2017 project.
 
 The API is developed in Django/Python
 
+
 ## Development Deployment Environment
 
 To deploy Forester-Job-Placement Order on an instance of OpenShift, see [the instructions](../RunningLocal.md) in the file RunningLocal.md.
