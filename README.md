@@ -37,6 +37,7 @@ To deploy using a local instance of OpenShift, refer to [Running on OpenShift](.
 
 The project can also be run locally using Docker and Docker Compose.  Refer to [Running with Docker Compose](./docker/README.md) for instructions.
 
+> Please note you must be connected to a government network to leverage local testing of emails
 
 ## Code of Conduct
 
