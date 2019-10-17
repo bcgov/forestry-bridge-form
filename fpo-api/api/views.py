@@ -92,9 +92,7 @@ class SurveyPdfView(generics.GenericAPIView):
         html_content = template.render(responses)
 
         if name == 'primary':
-            instruct_template = get_template("instructions-primary.html")
-            instruct_html = instruct_template.render(responses)
-            docs = (instruct_html,) + (html_content,)*4
+            docs = (html_content,)
             pdf_content = render_pdf(*docs)
 
         else:
