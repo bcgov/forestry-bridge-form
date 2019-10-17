@@ -219,6 +219,15 @@
                         "key": "EMAIL_SENDER"
                       }
                     }
+                  },
+                  {
+                    "name": "EMAIL_INBOX",
+                    "valueFrom": {
+                      "secretKeyRef": {
+                        "name": "${NAME}-api-email-config",
+                        "key": "EMAIL_INBOX"
+                      }
+                    }
                   }
                 ],
                 "resources": {
