@@ -518,11 +518,11 @@
                             "title": "Other transferable skills:",
                             "items": [
                                 {
-                                    "name": "Other",
+                                    "name": "Other1",
                                     "title": "Other:"
                                 },
                                 {
-                                    "name": "Other",
+                                    "name": "Other2",
                                     "title": "Other:"
                                 }
                             ]
