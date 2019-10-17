@@ -74,24 +74,27 @@
                         },
                         {
                             "type": "text",
-                            "name": "Area:",
+                            "name": "Area",
                             "visible": false,
-                            "visibleIf": "{ApplicantEducation} contains \"item6\"",
-                            "title": "Area:"
+                            "visibleIf": "{ApplicantEducation} contains \"Post-secondary diploma/degree\"",
+                            "title": "Area:",
+                            "isRequired": true
                         },
                         {
                             "type": "text",
-                            "name": "Which trade(s)",
+                            "name": "Which trades",
                             "visible": false,
-                            "visibleIf": "{ApplicantEducation} contains \"item5\"",
-                            "title": "Which trade(s)?"
+                            "visibleIf": "{ApplicantEducation} contains \"Trades Qualification\"",
+                            "title": "Which trade(s)?",
+                            "isRequired": true
                         },
                         {
                             "type": "multipletext",
-                            "name": "Apprentice certification",
+                            "name": "ApprenticeCertification",
                             "visible": false,
-                            "visibleIf": "{ApplicantEducation} contains \"item7\"",
+                            "visibleIf": "{ApplicantEducation} contains \"Apprentice\"",
                             "title": "Apprentince certification:",
+                            "isRequired": true,
                             "items": [
                                 {
                                     "name": "Trade:",
@@ -144,14 +147,14 @@
                         },
                         {
                             "type": "text",
-                            "name": "Exp(years)",
+                            "name": "YearsofExp",
                             "width": "50%",
                             "title": "Years of forestry experience:",
                             "isRequired": true
                         },
                         {
                             "type": "checkbox",
-                            "name": "Equiment(s)Trained",
+                            "name": "EquimentsTrained",
                             "title": "Equipment trained or certified to operate (at current or previous operations)",
                             "isRequired": true,
                             "choices": [
@@ -204,10 +207,10 @@
                         },
                         {
                             "type": "text",
-                            "name": "Equiment(s)Trained",
+                            "name": "OtherEquipment",
                             "visible": false,
-                            "visibleIf": "{Equiment(s)Trained} contains \"item10\"",
-                            "title": "Other:"
+                            "visibleIf": "{EquimentsTrained} contains \"Other\"",
+                            "title": "Other Equipment:"
                         },
                         {
                             "type": "checkbox",
@@ -226,10 +229,6 @@
                                 {
                                     "value": "H2S Alive",
                                     "text": "H2S Alive"
-                                },
-                                {
-                                    "value": "WHMIS",
-                                    "text": "WHMIS"
                                 },
                                 {
                                     "value": "Confined Space Awareness",
@@ -256,15 +255,15 @@
                         },
                         {
                             "type": "text",
-                            "name": "First Aid Level:",
-                            "visibleIf": "{Certifications} contains \"item1\"",
-                            "title": "First Aid Level",
+                            "name": "FirstAidLevel",
+                            "visibleIf": "{Certifications} contains \"First Aid\"",
+                            "title": "First Aid Level:",
                             "isRequired": true
                         },
                         {
                             "type": "text",
-                            "name": "Welding Level",
-                            "visibleIf": "{Certifications} contains \"item2\"",
+                            "name": "WeldingLevel",
+                            "visibleIf": "{Certifications} contains \"Welding\"",
                             "title": "Welding Level:",
                             "isRequired": true
                         },
@@ -303,37 +302,37 @@
                         },
                         {
                             "type": "text",
-                            "name": "Planner(Yrs)",
+                            "name": "YrsOfPlanner",
                             "visible": false,
-                            "visibleIf": "{ExperienceArea} contains \"item1\"",
+                            "visibleIf": "{ExperienceArea} contains \"Planner\"",
                             "title": "Planner: Number of Years",
                             "isRequired": true
                         },
                         {
                             "type": "text",
-                            "name": "Sawmill(Yrs)",
+                            "name": "YrsOfSawmill",
                             "visible": false,
-                            "visibleIf": "{ExperienceArea} contains \"item2\"",
+                            "visibleIf": "{ExperienceArea} contains \"Sawmill\"",
                             "title": "Sawmill: Number of Years"
                         },
                         {
                             "type": "text",
-                            "name": "Log Yard(Yrs)",
-                            "visibleIf": "{ExperienceArea} contains \"item3\"",
+                            "name": "YrsOfLogYard",
+                            "visibleIf": "{ExperienceArea} contains \"Log Yard\"",
                             "title": "Log Yard: Number of Years"
                         },
                         {
                             "type": "text",
-                            "name": "Energy Plant(Yrs)",
+                            "name": "YrsOfEngergyPlant",
                             "visible": false,
-                            "visibleIf": "{ExperienceArea} contains \"item4\"",
+                            "visibleIf": "{ExperienceArea} contains \"Energy Plant\"",
                             "title": "Energy Plant: Number of Years"
                         },
                         {
                             "type": "text",
-                            "name": "Kilns(Yrs)",
+                            "name": "YrsOfKilns",
                             "visible": false,
-                            "visibleIf": "{ExperienceArea} contains \"item5\"",
+                            "visibleIf": "{ExperienceArea} contains \"Kilns\"",
                             "title": "Kilns: Number of Years"
                         },
                         {
@@ -371,9 +370,9 @@
                         },
                         {
                             "type": "text",
-                            "name": "Other driving training",
+                            "name": "OtherDrivingTraining",
                             "visible": false,
-                            "visibleIf": "{DrivingExp} contains [\"item5\"]",
+                            "visibleIf": "{DrivingExp} contains \"Other\"",
                             "title": "Other driving training:",
                             "isRequired": true
                         },
@@ -456,15 +455,15 @@
                         },
                         {
                             "type": "text",
-                            "name": "SawmillTrained",
+                            "name": "OtherSawmillTraining",
                             "visible": false,
-                            "visibleIf": "{SawmillTrained} contains [\"item16\"]",
+                            "visibleIf": "{SawmillTrained} contains \"Other\"",
                             "title": "Other training:",
                             "isRequired": true
                         },
                         {
                             "type": "checkbox",
-                            "name": "Hobbies_Interests",
+                            "name": "HobbiesInterests",
                             "title": "Do you have skills from your hobbies or interests that could be transferred to a new job or role, such as:",
                             "isRequired": true,
                             "choices": [
@@ -513,9 +512,9 @@
                         },
                         {
                             "type": "multipletext",
-                            "name": "Other transferable skills",
+                            "name": "OtherTransferableSkills",
                             "visible": false,
-                            "visibleIf": "{Hobbies_Interests} contains [\"item9\"]",
+                            "visibleIf": "{HobbiesInterests} contains \"Other\"",
                             "title": "Other transferable skills:",
                             "items": [
                                 {
