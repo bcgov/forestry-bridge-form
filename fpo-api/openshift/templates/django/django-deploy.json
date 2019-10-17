@@ -167,6 +167,14 @@
                   {
                     "name": "DJANGO_DEBUG",
                     "value": "${DJANGO_DEBUG}"
+                  },
+                  {
+                    "name": "PDF_SERVICE_URL",
+                    "value": "${PDF_SERVICE_URL}"
+                  },
+                  {
+                    "name": "WEB_CONCURRENCY",
+                    "value": "${WEB_CONCURRENCY}"
                   }
                 ],
                 "resources": {
@@ -262,6 +270,20 @@
       "description": "The name associated to the database deployment resources.  In particular, this is used to wrie up the credentials associated to the database.",
       "required": true,
       "value": "postgresql"
+    },
+    {
+      "name": "PDF_SERVICE_URL",
+      "displayName": "URL for PDF service.",
+      "description": "Full URL to PDF service  (wesasyprint) used to generate PDF from survey/form content.",
+      "required": true,
+      "value": "http://weasyprint:5001"
+    },
+    {
+      "name": "WEB_CONCURRENCY",
+      "displayName": "Value to control number of gunicorn workers.",
+      "description": "Value to control number of gunicorn workers.",
+      "required": true,
+      "value": "4"
     }
   ]
 }
