@@ -9,9 +9,6 @@ The API is developed in Django/Python, using a Visual Studio 2017 project.
 
 The API is developed in Django/Python
 
-### Constants
-
-Any constants can be found within `__init__.py`
 
 ## Development Deployment Environment
 
