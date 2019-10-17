@@ -61,9 +61,11 @@ In this example search your working copy for all instances of `assemble-runtime`
 
 ## Starting the Project
 
+> You will want to add an environment variable to use as an email inbox to do any e2e testing
+
 To start the project run:
 ```
-./manage.sh start
+DJANGO_EMAIL_INBOX=<email> && ./manage.sh start
 ```
 
 This will start the project interactively; with all of the logs being written to the command line.  Press `Ctrl-C` to shut down the services from the same shell window.

@@ -18,3 +18,4 @@ DATABASE_DEPLOYMENT_NAME=postgresql
 EMAIL_HOST=apps.smtp.gov.bc.ca
 EMAIL_PORT=25
 EMAIL_SENDER=donotreply@gov.bc.ca
+EMAIL_INBOX=lbr.forestryworker@gov.bc.ca

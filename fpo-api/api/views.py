@@ -32,11 +32,11 @@ from rest_framework import permissions
 from rest_framework import mixins
 from rest_framework import generics
 from . import serializers
-
+from django.core.mail import EmailMessage
 from api.auth import SiteMinderAuth
 from api.models import User
 from api.pdf import render as render_pdf
-
+from api.utils import sendEmail, getConfirmationMessageBody, getConfirmationMessageSubject, generateCompressedTrackingCode
 
 class AcceptTermsView(APIView):
     permission_classes = (permissions.IsAuthenticated,)
@@ -45,7 +45,6 @@ class AcceptTermsView(APIView):
         request.user.accepted_terms_at = datetime.now()
         request.user.save()
         return Response({'ok': True})
-
 
 class UserStatusView(APIView):
     def get(self, request):

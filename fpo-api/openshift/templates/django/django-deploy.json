@@ -22,7 +22,8 @@
       "data": {
           "EMAIL_HOST": "${EMAIL_HOST}",
           "EMAIL_PORT": "${EMAIL_PORT}",
-          "EMAIL_SENDER": "${EMAIL_SENDER}"
+          "EMAIL_SENDER": "${EMAIL_SENDER}",
+          "EMAIL_INBOX": "${EMAIL_INBOX}"
       },
       "type": "Opaque"
     },
@@ -345,6 +346,11 @@
       "displayName": "sender email address",
       "required": true,
       "value": "donotreply@gov.bc.ca"
+    },
+    {
+      "name": "EMAIL_INBOX",
+      "displayName": "sender email address",
+      "required": true
     }
   ]
 }
