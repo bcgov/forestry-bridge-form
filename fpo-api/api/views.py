@@ -35,9 +35,7 @@ from . import serializers
 from api.auth import SiteMinderAuth
 from api.models import User
 from api.pdf import render as render_pdf
-from api.utils import sendEmail, 
-    getConfirmationMessageBody, getConfirmationMessageSubject, 
-    generateCompressedTrackingCode, getPDFFilename
+from api.utils import sendEmail, getConfirmationMessageBody, getConfirmationMessageSubject, generateCompressedTrackingCode, getPDFFilename
 from django.core.mail import EmailMessage
 
 class AcceptTermsView(APIView):
