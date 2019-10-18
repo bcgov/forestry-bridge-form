@@ -80,12 +80,9 @@ class SurveyPdfView(generics.GenericAPIView):
         # where the pdf is sent too
         email_inbox = os.getenv('EMAIL_INBOX')
         email_from_address = os.getenv('EMAIL_SENDER')
-        print(email_inbox)
-        print("EMAIL INBOX")
         subject = getConfirmationMessageSubject(tracking_code)
         messageBody = getConfirmationMessageBody()
-        print("EMAIL SUBJECT")
-        print(subject)
+
          
         email = EmailMessage(subject, messageBody, email_from_address, [email_inbox])
 
@@ -103,7 +100,8 @@ class SurveyPdfView(generics.GenericAPIView):
             pdf_content = render_pdf(html_content)
 
         file_name = getPDFFilename(tracking_code)
-        print('FILE NAME')
+        
+        print("Created PDF")
         print(file_name)
         email.attach(file_name, pdf_content, 'application/pdf')
 
