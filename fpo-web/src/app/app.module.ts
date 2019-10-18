@@ -20,12 +20,14 @@ import { TermsContentComponent } from './home/terms-content.component';
 import { TermsViewComponent } from './home/terms.component';
 import { UserStatusComponent } from './home/status.component';
 import { UserStatusResolver } from './home/status-resolver.service';
+import {HttpClientModule} from '@angular/common/http';
 
 import { SurveyComponent } from './survey/survey.component';
 import { SurveyPrimaryComponent } from './survey/primary.component';
 import { SurveyEditorComponent } from './survey/editor.component';
 import { SurveySidebarComponent } from './survey/sidebar.component';
 import { ResultComponent } from './result/result.component';
+import { SuccessPageComponent } from './survey/success-page/success-page.component';
 
 
 @NgModule({
@@ -45,11 +47,13 @@ import { ResultComponent } from './result/result.component';
     TermsContentComponent,
     TermsViewComponent,
     UserStatusComponent,
+    SuccessPageComponent,
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpModule,
+    HttpClientModule,
     AppRoutingModule,
     NgbModule,
     AdminModule,
