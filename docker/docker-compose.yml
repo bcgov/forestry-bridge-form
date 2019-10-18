@@ -65,7 +65,8 @@ services:
       - EMAIL_HOST=${DJANGO_EMAIL_HOST}
       - EMAIL_PORT=${DJANGO_EMAIL_PORT}
       - EMAIL_SENDER=donotreply@gov.bc.ca
-      - EMAIL_INBOX=${DJANGO_EMAIL_INBOX}
+    env_file:
+      - .env
     volumes:
       - ../fpo-api/api:/opt/app-root/src/api
     networks:
