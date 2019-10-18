@@ -79,11 +79,10 @@ class SurveyPdfView(generics.GenericAPIView):
         tracking_code = generateCompressedTrackingCode()
         # where the pdf is sent too
         email_inbox = os.getenv('EMAIL_INBOX')
-
+        email_from_address = os.getenv('EMAIL_SENDER')
         subject = getConfirmationMessageSubject(tracking_code)
-        messageBody = getConfirmationMessageBody()
-         
-        email = EmailMessage(subject, messageBody, [email_inbox])
+        messageBody = getConfirmationMessageBody() 
+        email = EmailMessage(subject, messageBody, email_from_address, [email_inbox])
 
         responses = json.loads(request.POST['data'])
         # responses = {'question1': 'test value'}
@@ -99,10 +98,12 @@ class SurveyPdfView(generics.GenericAPIView):
             pdf_content = render_pdf(html_content)
 
         file_name = getPDFFilename(tracking_code)
+        
+        print("Created PDF")
+        print(file_name)
         email.attach(file_name, pdf_content, 'application/pdf')
 
         # send email
         email.send()
-
 
         return JsonResponse({'ok': True, 'tracking_code': tracking_code})
