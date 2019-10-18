@@ -37,7 +37,7 @@ export class SurveySidebarComponent  {
           disabled: ! complete,
           index: links.length,
           textIndex: '' + (links.length + 1),
-          title: "Print Application Forms",
+          title: "Submit Application Forms",
           current: mode === 'print',
           special: 'print',
           separate: true});

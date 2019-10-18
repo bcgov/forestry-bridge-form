@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { GeneralDataService } from '../general-data.service';
+import { HttpClient } from '@angular/common/http';
 
 declare var window: any;
 
@@ -22,15 +23,19 @@ export class SurveyPrimaryComponent implements OnInit {
     public data: any;
     public jsonObject: any;
     protected initialMode = '';
+    public apiPath: string;
+    public env: 'local' | 'prod';
 
 
     constructor(
         private route: ActivatedRoute,
         private router: Router,
         private dataService: GeneralDataService,
+        private http: HttpClient
     ) { }
 
     ngOnInit() {
+
         let routeData = this.route.snapshot.data;
         this.surveyPath = routeData.survey_path;
         this.surveyJson = routeData.survey;
@@ -371,5 +376,15 @@ export class SurveyPrimaryComponent implements OnInit {
         this.jsonObject = JSON.parse(this.resultJson);
 
         this.printUrl = this.dataService.getApiUrl('survey-print/' + this.cacheName);
+    }
+    submitPoster(){
+        this.printUrl = this.dataService.getApiUrl('survey-print/' + this.cacheName);
+        const payload = {
+            data: this.jsonObject
+        }
+        this.http.post(`${this.printUrl}`,payload)
+        .subscribe(item => {
+            this.router.navigate(['submission-confirmation']);
+        });
     }
 }

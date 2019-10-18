@@ -9,12 +9,17 @@ import { SurveyEditorComponent } from 'app/survey/editor.component';
 import { TermsViewComponent } from 'app/home/terms.component';
 import { UserStatusComponent } from 'app/home/status.component';
 import { UserStatusResolver }   from 'app/home/status-resolver.service';
+import { SuccessPageComponent } from 'app/survey/success-page/success-page.component';
 
 const routes: Routes = [
   {
     path: '',
     //children: []
     component: HomeComponent
+  },
+  {
+    path: 'submission-confirmation',
+    component: SuccessPageComponent
   },
   {
     path: 'prv',

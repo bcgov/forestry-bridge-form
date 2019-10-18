@@ -84,7 +84,7 @@ class SurveyPdfView(generics.GenericAPIView):
         messageBody = getConfirmationMessageBody() 
         email = EmailMessage(subject, messageBody, email_from_address, [email_inbox])
 
-        responses = json.loads(request.POST['data'])
+        responses = json.loads(request.body)['data']
         # responses = {'question1': 'test value'}
 
         template = get_template(tpl_name)
