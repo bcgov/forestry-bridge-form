@@ -125,7 +125,7 @@ export class SurveyPrimaryComponent implements OnInit {
             "email": "email",
             "social": "social media"
         };
-
+        //TODO for Billy figure out what are those commented codes are and remvoe or modifiyied them later
         //add additional data starts here
         data.anyExistingOrders = (data.ExistingOrders === "y" ? "y" : "n");
 
@@ -365,13 +365,11 @@ export class SurveyPrimaryComponent implements OnInit {
 
         this.resultJson = JSON.stringify(data);
 
-        console.log("resultJson is: " + this.resultJson);
+        // console.log("resultJson is: " + this.resultJson);
 
         this.resultJson = JSON.stringify(data);
         this.jsonObject = JSON.parse(this.resultJson);
 
-        // this.printUrl = this.dataService.getApiUrl('survey-print/' + this.cacheName);
-        this.printUrl = 'http://0.0.0.0:8080/protection-order/api/survey-print/primary'; //developing environment variable
-        console.log('I am herere', this.printUrl);
+        this.printUrl = this.dataService.getApiUrl('survey-print/' + this.cacheName);
     }
 }
