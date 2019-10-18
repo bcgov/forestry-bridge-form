@@ -33,8 +33,7 @@
                         {
                             "type": "text",
                             "name": "ApplicantPhone",
-                            "title": "Phone Number",
-                            "inputType": "number"
+                            "title": "Phone Number"
                         },
                         {
                             "type": "text",
@@ -73,12 +72,10 @@
                                     "value": "PostSecondary_diploma",
                                     "text": "Post-secondary diploma/degree"
                                 },
-                                {
-                                    "value": "Apprentice",
-                                    "text": "Apprentice"
-                                }
+                                "Apprentice"
                             ],
-                            "colCount": 2
+                            "colCount": 2,
+                            "hasNone": true
                         },
                         {
                             "type": "text",
@@ -205,13 +202,10 @@
                                 {
                                     "value": "Other",
                                     "text": "Other"
-                                },
-                                {
-                                    "value": "None_of_the_above",
-                                    "text": "None of the above"
                                 }
                             ],
-                            "colCount": 2
+                            "colCount": 2,
+                            "hasNone": true
                         },
                         {
                             "type": "text",
@@ -225,19 +219,18 @@
                             "name": "Certifications",
                             "title": "Certifications or tickets that you hold",
                             "isRequired": true,
+                            "hasOther": true,
                             "choices": [
                                 {
                                     "value": "FirstAid",
                                     "text": "First Aid"
                                 },
-                                {
-                                    "value": "Welding",
-                                    "text": "Welding"
-                                },
+                                "Welding",
                                 {
                                     "value": "H2SAlive",
                                     "text": "H2S Alive"
                                 },
+                                "WHMIS",
                                 {
                                     "value": "Confined_Space_Awareness",
                                     "text": "Confined Space Awareness"
@@ -253,13 +246,10 @@
                                 {
                                     "value": "S185_Fire_Suppression_Safety",
                                     "text": "S-185 Fire Suppression & Safety"
-                                },
-                                {
-                                    "value": "None_of_the_above",
-                                    "text": "None of the above"
                                 }
                             ],
-                            "colCount": 2
+                            "colCount": 2,
+                            "hasNone": true
                         },
                         {
                             "type": "text",
@@ -278,7 +268,7 @@
                         {
                             "type": "checkbox",
                             "name": "ExperienceArea",
-                            "title": "Experience in the following areas (at current or previous operations):",
+                            "title": "Experience in the following areas (at current or previous employment):",
                             "isRequired": true,
                             "choices": [
                                 {
@@ -300,13 +290,10 @@
                                 {
                                     "value": "Kilns",
                                     "text": "Kilns"
-                                },
-                                {
-                                    "value": "None_of_the_above",
-                                    "text": "None of the above"
                                 }
                             ],
-                            "colCount": 2
+                            "colCount": 2,
+                            "hasNone": true
                         },
                         {
                             "type": "text",
@@ -368,13 +355,10 @@
                                 {
                                     "value": "Other",
                                     "text": "Other"
-                                },
-                                {
-                                    "value": "None_of_the_above",
-                                    "text": "None of the above"
                                 }
                             ],
-                            "colCount": 2
+                            "colCount": 2,
+                            "hasNone": true
                         },
                         {
                             "type": "text",
@@ -387,7 +371,7 @@
                         {
                             "type": "checkbox",
                             "name": "SawmillTrained",
-                            "title": "Sawmill/Planer - trained or certified to operate (at current of previous operations)",
+                            "title": "Sawmill/Planer - trained or certified to operate (at current of previous employment)",
                             "isRequired": true,
                             "choices": [
                                 {
@@ -453,13 +437,10 @@
                                 {
                                     "value": "Other",
                                     "text": "Other"
-                                },
-                                {
-                                    "value": "None of the above",
-                                    "text": "None of the above"
                                 }
                             ],
-                            "colCount": 3
+                            "colCount": 3,
+                            "hasNone": true
                         },
                         {
                             "type": "text",
@@ -510,13 +491,10 @@
                                 {
                                     "value": "Other",
                                     "text": "Other"
-                                },
-                                {
-                                    "value": "None of the above",
-                                    "text": "None of the above"
                                 }
                             ],
-                            "colCount": 3
+                            "colCount": 3,
+                            "hasNone": true
                         },
                         {
                             "type": "multipletext",
@@ -526,11 +504,11 @@
                             "title": "Other transferable skills:",
                             "items": [
                                 {
-                                    "name": "Other1",
+                                    "name": "OtherHobbyWan",
                                     "title": "Other:"
                                 },
                                 {
-                                    "name": "Other2",
+                                    "name": "OtherHobbyTwo",
                                     "title": "Other:"
                                 }
                             ]
