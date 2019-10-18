@@ -21,3 +21,8 @@ def getPDFFilename(trackingCode):
   # a better place for formatting a filename should be within a configuartion file like a 
   # pdf.config.json
   return "Job-Matching-" + trackingCode + '.pdf'
+
+def mergeDicts(a, b):
+  mergedDict = a.copy()
+  mergedDict.update(b)
+  return mergedDict

@@ -35,7 +35,7 @@ from . import serializers
 from api.auth import SiteMinderAuth
 from api.models import User
 from api.pdf import render as render_pdf
-from api.utils import  getConfirmationMessageBody, getConfirmationMessageSubject, generateCompressedTrackingCode, getPDFFilename
+from api.utils import  getConfirmationMessageBody, getConfirmationMessageSubject, generateCompressedTrackingCode, getPDFFilename, mergeDicts
 from django.core.mail import EmailMessage
 
 class AcceptTermsView(APIView):
@@ -102,7 +102,14 @@ class SurveyPdfView(generics.GenericAPIView):
         print("Created PDF")
         print(file_name)
         email.attach(file_name, pdf_content, 'application/pdf')
+        print("Creating Raw Data File")
 
+        json_filename = 'survey-raw-data.txt'
+        
+        # merge survey data with tracking code
+        survey_with_tracking_code = mergeDicts(responses, {'tracking_code': tracking_code})
+        # attach raw data
+        email.attach(json_filename, json.dumps(survey_with_tracking_code), 'text/plain')
         # send email
         email.send()
 
