@@ -257,11 +257,11 @@
                             </tr>
                             <tr>
                                 <td>
-                                    <span class="brdr-btm">&nbsp;{{ ApplicantContact.phone }}</span>
+                                    <span class="brdr-btm">&nbsp;{{ ApplicantPhone }}</span>
                                     <label class="label-btm">Phone</label>
                                 </td>
                                 <td>
-                                    <span class="brdr-btm">&nbsp;{{ ApplicantContact.email }}</span>
+                                    <span class="brdr-btm">&nbsp;{{ ApplicantEmail }}</span>
                                     <label class="label-btm">E-mail</label>
                                 </td>
                             </tr>
@@ -295,58 +295,138 @@
                                         </td>
                                     </tr>
                                     <tr>
+                                        {% if 'ATL' in EquimentsTrained %}
+                                        <td colspan="2">
+                                            <span class="check ">&#10003;</span>
+                                            <span class="label">ATL</span>
+                                        </td>
+                                        {% else %}
                                         <td colspan="2">
                                             <span class="check "></span>
-                                            <span class="label">ALT</span>
+                                            <span class="label">ATL</span>
                                         </td>
+                                        {% endif %}
+                                        {% if 'Small Forklift' in EquimentsTrained %}
                                         <td colspan="2">
                                             <span class="check selected">&#10003;</span>
                                             <span class="label">Small Forklift</span>
                                         </td>
+                                        {% else %}
+                                        <td colspan="2">
+                                            <span class="check selected"></span>
+                                            <span class="label">Small Forklift</span>
+                                        </td>
+                                        {% endif %}
                                     </tr>
                                     <tr>
+                                        {% if 'Dozer' in EquimentsTrained %}
+                                        <td colspan="2">
+                                            <span class="check selected">&#10003;</span>
+                                            <span class="label">Dozer</span>
+                                        </td>
+                                        {% else %}
                                         <td colspan="2">
                                             <span class="check selected"></span>
                                             <span class="label">Dozer</span>
                                         </td>
+                                        {% endif %}
+                                        {% if 'Forklift Yard' in EquimentsTrained %}
+                                        <td colspan="2">
+                                            <span class="check selected">&#10003;</span>
+                                            <span class="label">Forklift Yard</span>
+                                        </td>
+                                        {% else %}
                                         <td colspan="2">
                                             <span class="check selected"></span>
                                             <span class="label">Forklift Yard</span>
                                         </td>
+                                        {% endif %}
                                     </tr>
                                     <tr>
+                                        {% if 'Grader' in EquimentsTrained %}
+                                        <td colspan="2">
+                                            <span class="check selected">&#10003;</span>
+                                            <span class="label">Grader</span>
+                                        </td>
+                                        {% else %}
                                         <td colspan="2">
                                             <span class="check selected"></span>
-                                            <span class="label">Garder</span>
+                                            <span class="label">Grader</span>
                                         </td>
+                                        {% endif %}
+                                        {% if 'Grapple_Loader_Log Yard' in EquimentsTrained %}
                                         <td colspan="2">
-
                                             <span class="check selected">&#10003;</span>
                                             <span class="label">Grapple Loader Log Yard</span>
                                         </td>
+                                        {% else %}
+                                        <td colspan="2">
+                                            <span class="check selected"></span>
+                                            <span class="label">Grapple Loader Log Yard</span>
+                                        </td>
+                                        {% endif %}
                                     </tr>
                                     <tr>
+                                        {% if 'Excavator' in EquimentsTrained %}
+                                        <td colspan="2">
+                                            <span class="check selected">&#10003;</span>
+                                            <span class="label">Excavator</span>
+                                        </td>
+                                        {% else %}
                                         <td colspan="2">
                                             <span class="check selected"></span>
                                             <span class="label">Excavator</span>
-                                            <span>&nbsp;</span><!--keep this item aligned -->
                                         </td>
+                                        {% endif %}
+                                        {% if 'Bucket Loader' in EquimentsTrained %}
+                                        <td colspan="2">
+                                            <span class="check selected">&#10003;</span>
+                                            <span class="label">Bucket Loader</span>
+                                        </td>
+                                        {% else %}
                                         <td colspan="2">
                                             <span class="check selected"></span>
-                                            <span class="label" style="display: inline-block;">Bucket Loader</span>
+                                            <span class="label">Bucket Loader</span>
                                         </td>
+                                        {% endif %}
                                     </tr>
                                     <tr>
+                                        {% if 'Crane' in EquimentsTrained %}
+                                        <td colspan="2">
+                                            <span class="check selected">&#10003;</span>
+                                            <span class="label">Crane</span>
+                                        </td>
+                                        {% else %}
                                         <td colspan="2">
                                             <span class="check selected"></span>
                                             <span class="label">Crane</span>
-                                            <span>&nbsp;</span><!--keep this item aligned -->
                                         </td>
+                                        {% endif %}
+                                        {% if 'Other' in EquimentsTrained %}
                                         <td colspan="2">
-                                            <span class="check selected"></span>
-                                            <span class="label" style="display: inline-block;">other (specify) </span>
+                                            <span class="check selected">&#10003;</span>
+                                            <span class="label">Other (specify)</span>
                                             <span class="brdr-btm" style="margin-top: .5em; display: inline-block; width: 40%;">&nbsp;{{ OtherEquipment }}</span>
                                         </td>
+                                        {% else %}
+                                        <td colspan="2">
+                                            <span class="check selected"></span>
+                                            <span class="label">Other (specify)</span>
+                                        </td>
+                                        {% endif %}
+                                    </tr>
+                                    <tr>
+                                        {% if 'None_of_the_above' in EquimentsTrained %}
+                                        <td colspan="2">
+                                            <span class="check selected">&#10003;</span>
+                                            <span class="label">None of the above</span>
+                                        </td>
+                                        {% else %}
+                                        <td colspan="2">
+                                            <span class="check selected"></span>
+                                            <span class="label">None of the above</span>
+                                        </td>
+                                        {% endif %}
                                     </tr>
                                 </td>
                         </tr>
@@ -366,56 +446,115 @@
                                         <h4>Certifications or tickets that you hold</h4>
                                     </td>
                                 </tr>
-                                <tr>
-                                    <td colspan="2">
-                                        <span class="check selected"></span>
-                                        <span class="label" style="display: inline-block;">First Aid Level (specify) </span>
-                                        <span class="brdr-btm" style="margin-top: .5em; display: inline-block; width: 40%;">&nbsp;{{ FirstAidLevel }}</span>
-                                    </td>
-                                    <td colspan="2">
-                                        <span class="check selected"></span>
-                                        <span class="label" style="display: inline-block;">Welding Level (specify) </span>
-                                        <span class="brdr-btm" style="margin-top: .5em; display: inline-block; width: 40%;">&nbsp;{{ WeldingLevel }}</span>
-                                    </td>
+                                        {% if 'FirstAid' in Certifications %}
+                                        <td colspan="2">
+                                            <span class="check selected">&#10003;</span>
+                                            <span class="label">First Aid Level</span>
+                                            <span class="brdr-btm" style="margin-top: .5em; display: inline-block; width: 40%;">&nbsp;{{ FirstAidLevel }}</span>
+                                        </td>
+                                        {% else %}
+                                        <td colspan="2">
+                                            <span class="check selected"></span>
+                                            <span class="label">First Aid Level</span>
+                                        </td>
+                                        {% endif %}
+                                        {% if 'Welding' in Certifications %}
+                                        <td colspan="2">
+                                            <span class="check selected">&#10003;</span>
+                                            <span class="label">Welding Level (specify)</span>
+                                            <span class="brdr-btm" style="margin-top: .5em; display: inline-block; width: 40%;">&nbsp;{{ WeldingLevel }}</span>
+                                        </td>
+                                        {% else %}
+                                        <td colspan="2">
+                                            <span class="check selected"></span>
+                                            <span class="label">Welding Level (specify)</span>
+                                        </td>
+                                        {% endif %}
                                 </tr>
                                 <tr>
-                                    <td colspan="2">
-                                        <span class="check"></span>
-                                        <span class="label">H2S Alive</span>
-                                    </td>
-                                    <td colspan="2">
-                                        <span class="check"></span>
-                                        <span class="label">WHMIS</span>
-                                    </td>
+                                    {% if 'H2SAlive' in Certifications %}
+                                        <td colspan="2">
+                                            <span class="check selected">&#10003;</span>
+                                            <span class="label">H2S Alive</span>
+                                        </td>
+                                        {% else %}
+                                        <td colspan="2">
+                                            <span class="check selected"></span>
+                                            <span class="label">H2S Alive</span>
+                                        </td>
+                                        {% endif %}
+                                        {% if 'WHMIS' in Certifications %}
+                                        <td colspan="2">
+                                            <span class="check selected">&#10003;</span>
+                                            <span class="label">WHMIS</span>
+                                        </td>
+                                        {% else %}
+                                        <td colspan="2">
+                                            <span class="check selected"></span>
+                                            <span class="label">WHMIS</span>
+                                        </td>
+                                        {% endif %}
                                 </tr>
                                 <tr>
-                                    <td colspan="2">
-                                        <span class="check"></span>
-                                        <span class="label">Confined Space Awareness</span>
-                                    </td>
-                                    <td colspan="2">
-
-                                        <span class="check selected">&#10003;</span>
-                                        <span class="label">Confined Space Awareness</span>
-                                    </td>
+                                    {% if 'Confined_Space_Awareness' in Certifications %}
+                                        <td colspan="2">
+                                            <span class="check selected">&#10003;</span>
+                                            <span class="label">Confined Space Awareness</span>
+                                        </td>
+                                        {% else %}
+                                        <td colspan="2">
+                                            <span class="check selected"></span>
+                                            <span class="label">Confined Space Awareness</span>
+                                        </td>
+                                        {% endif %}
+                                        {% if 'Chain_Saw_Safety' in Certifications %}
+                                        <td colspan="2">
+                                            <span class="check selected">&#10003;</span>
+                                            <span class="label">Chain Saw Safety</span>
+                                        </td>
+                                        {% else %}
+                                        <td colspan="2">
+                                            <span class="check selected"></span>
+                                            <span class="label">Chain Saw Safety</span>
+                                        </td>
+                                        {% endif %}
                                 </tr>
                                 <tr>
-                                    <td colspan="2">
-                                        <span class="check selected"></span>
-                                        <span class="label">Chain Saw Safety</span>
-                                        <span>&nbsp;</span><!--keep this item aligned -->
-                                    </td>
-                                    <td colspan="2">
-                                        <span class="check selected"></span>
-                                        <span class="label" style="display: inline-block;">S-100 Basic Fire Suppression & Safety</span>
-                                    </td>
+                                    {% if 'S185_Fire_Suppression_Safety' in Certifications %}
+                                        <td colspan="2">
+                                            <span class="check selected">&#10003;</span>
+                                            <span class="label">S-185 Fire Entrapment & Safety</span>
+                                        </td>
+                                        {% else %}
+                                        <td colspan="2">
+                                            <span class="check selected"></span>
+                                            <span class="label">S-185 Fire Entrapment & Safety</span>
+                                        </td>
+                                        {% endif %}
+                                        {% if 'S100_Basic_Fire_Suppression_Safety' in Certifications %}
+                                        <td colspan="2">
+                                            <span class="check selected">&#10003;</span>
+                                            <span class="label">S-100 Basic Fire Suppression & Safety</span>
+                                        </td>
+                                        {% else %}
+                                        <td colspan="2">
+                                            <span class="check selected"></span>
+                                            <span class="label">S-100 Basic Fire Suppression & Safety</span>
+                                        </td>
+                                        {% endif %}
                                 </tr>
                                 <tr>
-                                    <td colspan="2">
-                                        <span class="check selected"></span>
-                                        <span class="label">S-185 Fire Entrapment & Safety</span>
-                                        <span>&nbsp;</span><!--keep this item aligned -->
-                                    </td>
+                                    {% if 'None' in Certifications %}
+                                        <td colspan="2">
+                                            <span class="check selected">&#10003;</span>
+                                            <span class="label">None of the above</span>
+                                        </td>
+                                        {% else %}
+                                        <td colspan="2">
+                                            <span class="check selected"></span>
+                                            <span class="label">None of the above</span>
+                                        </td>
+                                        {% endif %}
                                 </tr>
                             </table>
                             </td>
@@ -427,7 +566,6 @@
                         
                 <table>  
                     <tbody>
-                        <tr class="section spacer"><td colspan="4">&nbsp;</td></tr>
                         <tr class="bordered">
                             <td colspan="4" style="padding: 0;">
                             <table>
@@ -437,35 +575,83 @@
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td colspan="2">
-                                        <span class="check selected"></span>
-                                        <span class="label" style="display: inline-block;">Planer (# Years) </span>
-                                        <span class="brdr-btm" style="margin-top: .5em; display: inline-block; width: 40%;">&nbsp;{{ YrsOfPlanner }}</span>
-                                    </td>
-                                    <td colspan="2">
-                                        <span class="check selected"></span>
-                                        <span class="label" style="display: inline-block;">Sawmill (# Years) </span>
-                                        <span class="brdr-btm" style="margin-top: .5em; display: inline-block; width: 40%;">&nbsp;{{ YrsOfSawmill }}</span>
-                                    </td>
+                                    {% if 'Planner' in ExperienceArea %}
+                                        <td colspan="2">
+                                            <span class="check selected">&#10003;</span>
+                                            <span class="label">Planner (# Years)</span>
+                                            <span class="brdr-btm" style="margin-top: .5em; display: inline-block; width: 40%;">&nbsp;{{ YrsOfPlanner }}</span>
+                                        </td>
+                                        {% else %}
+                                        <td colspan="2">
+                                            <span class="check selected"></span>
+                                            <span class="label">Planner(specify)</span>
+                                        </td>
+                                        {% endif %}
+                                        {% if 'Sawmill' in ExperienceArea %}
+                                        <td colspan="2">
+                                            <span class="check selected">&#10003;</span>
+                                            <span class="label">Sawmill (# Years)</span>
+                                            <span class="brdr-btm" style="margin-top: .5em; display: inline-block; width: 40%;">&nbsp;{{ YrsOfSawmill }}</span>
+                                        </td>
+                                        {% else %}
+                                        <td colspan="2">
+                                            <span class="check selected"></span>
+                                            <span class="label">Sawmill (# Years)</span>
+                                        </td>
+                                        {% endif %}
                                 </tr>
                                 <tr>
-                                    <td colspan="2">
-                                        <span class="check selected"></span>
-                                        <span class="label" style="display: inline-block;">Log Yard (# Years) </span>
-                                        <span class="brdr-btm" style="margin-top: .5em; display: inline-block; width: 40%;">&nbsp;{{ YrsOfLogYard }}</span>
-                                    </td>
-                                    <td colspan="2">
-                                        <span class="check selected"></span>
-                                        <span class="label" style="display: inline-block;">Energy Plant (# Years) </span>
-                                        <span class="brdr-btm" style="margin-top: .5em; display: inline-block; width: 40%;">&nbsp;{{ YrsOfEngergyPlant }}</span>
-                                    </td>
+                                    {% if 'Log Yard' in ExperienceArea %}
+                                        <td colspan="2">
+                                            <span class="check selected">&#10003;</span>
+                                            <span class="label">Log Yard (# Years)</span>
+                                            <span class="brdr-btm" style="margin-top: .5em; display: inline-block; width: 40%;">&nbsp;{{ YrsOfLogYard }}</span>
+                                        </td>
+                                        {% else %}
+                                        <td colspan="2">
+                                            <span class="check selected"></span>
+                                            <span class="label">Log Yard (specify)</span>
+                                        </td>
+                                        {% endif %}
+                                        {% if 'Energy Plant' in ExperienceArea %}
+                                        <td colspan="2">
+                                            <span class="check selected">&#10003;</span>
+                                            <span class="label">Energy Plant (# Years)</span>
+                                            <span class="brdr-btm" style="margin-top: .5em; display: inline-block; width: 40%;">&nbsp;{{ YrsOfEngergyPlant }}</span>
+                                        </td>
+                                        {% else %}
+                                        <td colspan="2">
+                                            <span class="check selected"></span>
+                                            <span class="label">Energy Plant (# Years)</span>
+                                        </td>
+                                        {% endif %}
                                 </tr>
                                 <tr>
-                                    <td colspan="2">
-                                        <span class="check selected"></span>
-                                        <span class="label" style="display: inline-block;">kilns (# Years) </span>
-                                        <span class="brdr-btm" style="margin-top: .5em; display: inline-block; width: 40%;">&nbsp;{{ YrsOfKilns }}</span>
-                                    </td>
+                                    {% if 'Kilns' in ExperienceArea %}
+                                        <td colspan="2">
+                                            <span class="check selected">&#10003;</span>
+                                            <span class="label">Kilns (# Years)</span>
+                                            <span class="brdr-btm" style="margin-top: .5em; display: inline-block; width: 40%;">&nbsp;{{ YrsOfKilns }}</span>
+                                        </td>
+                                        {% else %}
+                                        <td colspan="2">
+                                            <span class="check selected"></span>
+                                            <span class="label">Kilns (# Years)</span>
+                                        </td>
+                                        {% endif %}
+                                </tr>
+                                <tr>
+                                    {% if 'None_of_the_above' in ExperienceArea %}
+                                        <td colspan="2">
+                                            <span class="check selected">&#10003;</span>
+                                            <span class="label">None of the above</span>
+                                        </td>
+                                        {% else %}
+                                        <td colspan="2">
+                                            <span class="check selected"></span>
+                                            <span class="label">None_of_the_above</span>
+                                        </td>
+                                        {% endif %}
                                 </tr>
                                 <tr>
                             </table>
@@ -487,35 +673,77 @@
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td colspan="2">
-                                        <span class="check selected"></span>
-                                        <span class="label" style="display: inline-block;">Class 5 </span>
-                                    
-                                    </td>
-                                    <td colspan="2">
-                                        <span class="check selected"></span>
-                                        <span class="label" style="display: inline-block;">Class 3 </span>
-                                        
-                                    </td>
+                                  {% if 'Class5' in DrivingExp%}
+                                  <td colspan="2">
+                                      <span class="check ">&#10003;</span>
+                                      <span class="label">Class 5</span>
+                                  </td>
+                                  {% else %}
+                                  <td colspan="2">
+                                      <span class="check "></span>
+                                      <span class="label">Class 5</span>
+                                  </td>
+                                  {% endif %}
+                                  {% if 'Class3' in DrivingExp %}
+                                  <td colspan="2">
+                                      <span class="check ">&#10003;</span>
+                                      <span class="label">Class 3</span>
+                                  </td>
+                                  {% else %}
+                                  <td colspan="2">
+                                      <span class="check "></span>
+                                      <span class="label">Class 3</span>
+                                  </td>
+                                  {% endif %}
                                 </tr>
                                 <tr>
-                                    <td colspan="2">
-                                        <span class="check selected"></span>
-                                        <span class="label" style="display: inline-block;">Class 1 </span>
-                                        
-                                    </td>
-                                    <td colspan="2">
-                                        <span class="check selected"></span>
-                                        <span class="label" style="display: inline-block;">Air Endorsement  </span>
-                                        
-                                    </td>
+                                  {% if 'Class1' in DrivingExp %}
+                                  <td colspan="2">
+                                      <span class="check ">&#10003;</span>
+                                      <span class="label">Class 1</span>
+                                  </td>
+                                  {% else %}
+                                  <td colspan="2">
+                                      <span class="check "></span>
+                                      <span class="label">Class 1</span>
+                                  </td>
+                                  {% endif %}
+                                  {% if 'AirEndorsement' in DrivingExp %}
+                                  <td colspan="2">
+                                      <span class="check ">&#10003;</span>
+                                      <span class="label">Air Endorsement</span>
+                                  </td>
+                                  {% else %}
+                                  <td colspan="2">
+                                      <span class="check "></span>
+                                      <span class="label">Air Endorsement</span>
+                                  </td>
+                                  {% endif %}
                                 </tr>
                                 <tr>
+                                    {% if 'Other' in DrivingExp %}
                                     <td colspan="2">
-                                        <span class="check selected"></span>
-                                        <span class="label" style="display: inline-block;">None of the above  </span>
-                                        
+                                        <span class="check ">&#10003;</span>
+                                        <span class="label">Other</span>
+                                        <span class="brdr-btm" style="margin-top: .5em; display: inline-block; width: 40%;">&nbsp;{{ OtherDrivingTraining }}</span>
                                     </td>
+                                    {% else %}
+                                    <td colspan="2">
+                                        <span class="check "></span>
+                                        <span class="label">Other</span>
+                                    </td>
+                                    {% endif %}
+                                    {% if 'None_of_the_above' in DrivingExp %}
+                                    <td colspan="2">
+                                        <span class="check ">&#10003;</span>
+                                        <span class="label">None of the above</span>
+                                    </td>
+                                    {% else %}
+                                    <td colspan="2">
+                                        <span class="check "></span>
+                                        <span class="label">None of the above</span>
+                                    </td>
+                                    {% endif %}
                                 </tr>
                                 <tr>
                             </table>
@@ -525,109 +753,226 @@
                 </table>
                 <!-- end SECTION 5 -->
                 <!-- SECTION 6-->
-
-                <table> 
-                <tbody>
-                        <tr class="bordered">
-                            <td colspan="4" style="padding: 0;">
-                              
-                                    <tr>
-                                        <td colspan="4">
-                                            <h4>Sawmill / Planer - trained or certified to operate (at current or previous operations)</h4>
-                                        </td>
-                                    </tr>
-                                    <table>
-                                    <tr>
-                                        <td colspan="4">
-                                            <span class="check"></span>
-                                            <span class="label">Lumber Stacker</span>
-                                        </td>
-                                        <td colspan="4">
-                                            <span class="check"></span>
-                                            <span class="label">J Bar Operator</span>
-                                        </td>
-                                        <td colspan="4">
-                                            <span class="check"></span>
-                                            <span class="label">Chipper Operator</span>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td colspan="4">
-                                            <span class="check"></span>
-                                            <span class="label">Paint Booth</span>
-                                        </td>
-                                        <td colspan="4">
-                                            <span class="check"></span>
-                                            <span class="label">Edger Operator</span>
-                                        </td>
-                                        <td colspan="4">
-                                            <span class="check"></span>
-                                            <span class="label">Chipper car Attendant</span>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td colspan="4">
-                                            <span class="check"></span>
-                                            <span class="label">Tilt Host Feeder</span>
-                                        </td>
-                                        <td colspan="4">
-                                            <span class="check"></span>
-                                            <span class="label">Barker Operator</span>
-                                        </td>
-                                        <td colspan="4">
-                                            <span class="check"></span>
-                                            <span class="label">Logging Skidder</span>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td colspan="4">
-                                            <span class="check"></span>
-                                            <span class="label">Planer Feeder</span>
-                                        </td>
-                                        <td colspan="4">
-                                            <span class="check"></span>
-                                            <span class="label">Clean Up</span>
-                                        </td>
-                                        <td colspan="4">
-                                            <span class="check"></span>
-                                            <span class="label">Log Processer</span>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td colspan="4">
-                                            <span class="check"></span>
-                                            <span class="label">Lumber Grader/Trimmer</span>
-                                        </td>
-                                        <td colspan="4">
-                                            <span class="check selected"></span>
-                                            <span class="label">General Labour</span>
-                                        </td>
-                                        <td colspan="4">
-                                            <span class="check selected"></span>
-                                            <span class="label" style="display: inline-block;">other (specify) </span>
-                                            <span class="brdr-btm" style="margin-top: .5em; display: inline-block; width: 40%;">&nbsp;{{ OtherSawmillTraining }}</span>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td colspan="4">
-                                            <span class="check"></span>
-                                            <span class="label">Head Rig Operator</span>
-                                        </td>
-                                    </tr>
-                                </td>
-                              </tr>
-                         </tbody>
-                    </table>
-                </tr>
-                <!-- end SECTION 6 -->
-                <!--  New Page-->
-               
-                <div class="new-page"> 
-                    <!-- SECTION 7-->
-                    <table>  
+                 <table>  
                     <tbody>
                         <tr class="section spacer"><td colspan="4">&nbsp;</td></tr>
                         <tr class="bordered">
+                            <td colspan="6" style="padding: 0;">
+                                <table>
+                                    <tr>
+                                         <td colspan="4">
+                                              <h4>Sawmill / Planer - trained or certified to operate (at current or previous operations)</h4>
+                                         </td>
+                                     </tr>
+                                        <tr>
+                                          {% if 'Lumber Stacker' in SawmillTrained %}
+                                          <td colspan="2">
+                                              <span class="check ">&#10003;</span>
+                                              <span class="label">Lumber Stacker</span>
+                                          </td>
+                                          {% else %}
+                                          <td colspan="2">
+                                              <span class="check "></span>
+                                              <span class="label">Lumber Stacker</span>
+                                          </td>
+                                          {% endif %}
+                                          {% if 'J Bar Operator' in SawmillTrained %}
+                                          <td colspan="2">
+                                              <span class="check ">&#10003;</span>
+                                              <span class="label">J Bar Operator</span>
+                                          </td>
+                                          {% else %}
+                                          <td colspan="2">
+                                              <span class="check "></span>
+                                              <span class="label">J Bar Operator</span>
+                                          </td>
+                                          {% endif %}
+                                          {% if 'Chipper Operator' in SawmillTrained %}
+                                          <td colspan="2">
+                                              <span class="check ">&#10003;</span>
+                                              <span class="label">Chipper Operator</span>
+                                          </td>
+                                          {% else %}
+                                          <td colspan="2">
+                                              <span class="check "></span>
+                                              <span class="label">Chipper Operator</span>
+                                          </td>
+                                          {% endif %}
+                                        </tr>
+                                        <tr>
+                                          {% if 'Paint Booth' in SawmillTrained %}
+                                          <td colspan="2">
+                                              <span class="check ">&#10003;</span>
+                                              <span class="label">Paint Booth</span>
+                                          </td>
+                                          {% else %}
+                                          <td colspan="2">
+                                              <span class="check "></span>
+                                              <span class="label">Paint Booth</span>
+                                          </td>
+                                          {% endif %}
+                                          {% if 'Edger Operator' in SawmillTrained %}
+                                          <td colspan="2">
+                                              <span class="check ">&#10003;</span>
+                                              <span class="label">Edger Operator</span>
+                                          </td>
+                                          {% else %}
+                                          <td colspan="2">
+                                              <span class="check "></span>
+                                              <span class="label">Edger Operator</span>
+                                          </td>
+                                          {% endif %}
+                                          {% if 'Chip car Attendant' in SawmillTrained %}
+                                          <td colspan="2">
+                                              <span class="check ">&#10003;</span>
+                                              <span class="label">Chip Car Attendant</span>
+                                          </td>
+                                          {% else %}
+                                          <td colspan="2">
+                                              <span class="check "></span>
+                                              <span class="label">Chip Car Attendant</span>
+                                          </td>
+                                          {% endif %}
+                                        </tr>
+                                        <tr>
+                                          {% if 'Tilt Host Feeder' in SawmillTrained %}
+                                          <td colspan="2">
+                                              <span class="check ">&#10003;</span>
+                                              <span class="label">Tilt Host Feeder</span>
+                                          </td>
+                                          {% else %}
+                                          <td colspan="2">
+                                              <span class="check "></span>
+                                              <span class="label">Tilt Host Feeder</span>
+                                          </td>
+                                          {% endif %}
+                                          {% if 'Barker Operator' in SawmillTrained %}
+                                          <td colspan="2">
+                                              <span class="check ">&#10003;</span>
+                                              <span class="label">Barker Operator</span>
+                                          </td>
+                                          {% else %}
+                                          <td colspan="2">
+                                              <span class="check "></span>
+                                              <span class="label">Barker Operator</span>
+                                          </td>
+                                          {% endif %}
+                                          {% if 'Logging Skidder' in SawmillTrained %}
+                                          <td colspan="2">
+                                              <span class="check ">&#10003;</span>
+                                              <span class="label">Logging Skidder</span>
+                                          </td>
+                                          {% else %}
+                                          <td colspan="3">
+                                              <span class="check "></span>
+                                              <span class="label">Logging Skidder</span>
+                                          </td>
+                                          {% endif %}
+                                        </tr>
+
+                                        <tr>
+                                          {% if 'Planer Feeder' in SawmillTrained %}
+                                          <td colspan="2">
+                                              <span class="check ">&#10003;</span>
+                                              <span class="label">Planer Feeder</span>
+                                          </td>
+                                          {% else %}
+                                          <td colspan="2">
+                                              <span class="check "></span>
+                                              <span class="label">Planer Feeder</span>
+                                          </td>
+                                          {% endif %}
+
+                                          {% if 'Clean Up' in SawmillTrained %}
+                                          <td colspan="2">
+                                              <span class="check ">&#10003;</span>
+                                              <span class="label">Clean Up</span>
+                                          </td>
+                                          {% else %}
+                                          <td colspan="2">
+                                              <span class="check "></span>
+                                              <span class="label">Clean Up</span>
+                                          </td>
+                                          {% endif %}
+                                          {% if 'Log Processer' in SawmillTrained %}
+                                          <td colspan="2">
+                                              <span class="check ">&#10003;</span>
+                                              <span class="label">Log Processor</span>
+                                          </td>
+                                          {% else %}
+                                          <td colspan="2">
+                                              <span class="check "></span>
+                                              <span class="label">Log Processor</span>
+                                          </td>
+                                          {% endif %}
+                                        </tr>
+
+                                        <tr>
+                                          {% if 'Lumber Grader/Trimmer' in SawmillTrained %}
+                                          <td colspan="2">
+                                              <span class="check ">&#10003;</span>
+                                              <span class="label">Lumber Grader/Trimmer</span>
+                                          </td>
+                                          {% else %}
+
+                                          <td colspan="2">
+                                              <span class="check "></span>
+                                              <span class="label">Lumber Grader/Trimmer</span>
+                                          </td>
+
+                                          {% endif %}
+
+                                          {% if 'General Labour' in SawmillTrained %}
+                                          <td colspan="2">
+                                              <span class="check ">&#10003;</span>
+                                              <span class="label">General Labour</span>
+                                          </td>
+                                          {% else %}
+                                          <td colspan="2">
+                                              <span class="check "></span>
+                                              <span class="label">General Labour</span>
+                                          </td>
+                                          {% endif %}
+
+                                          {% if 'Other' in SawmillTrained %}
+                                          <td colspan="2">
+                                              <span class="check ">&#10003;</span>
+                                              <span class="label">Other (specify)</span>
+                                              <span class="brdr-btm" style="margin-top: .5em; display: inline-block; width: 40%;">&nbsp;{{ OtherSawmillTraining }}</span>
+                                          </td>
+                                          {% else %}
+                                          <td colspan="2">
+                                              <span class="check "></span>
+                                              <span class="label">Other (specify)</span>
+                                          </td>
+                                          {% endif %}
+                                        </tr>
+                                        <tr>
+                                          {% if 'Head Rig Operator' in SawmillTrained %}
+                                          <td colspan="2">
+                                              <span class="check ">&#10003;</span>
+                                              <span class="label">Head Rig Operator</span>
+                                          </td>
+                                          {% else %}
+                                          <td colspan="2">
+                                              <span class="check "></span>
+                                              <span class="label">Head Rig Operator</span>
+                                          </td>
+                                        </tr>
+                                          {% endif %}
+                                        </table>
+                                    </td>
+                                </tr>
+                              </tr>
+                         </tbody>
+                    </table>
+                <!-- end SECTION 6 -->
+                <!--  New Page-->
+                <!-- SECTION 7-->
+                    <table>  
+                        <tbody>
+                            <tr class="section spacer"><td colspan="4">&nbsp;</td></tr>
+                            <tr class="bordered">
                             <td colspan="4" style="padding: 0;">
                             <table>
                                 <tr>
@@ -636,38 +981,80 @@
                                     </td>
                                 </tr>
                                 <tr>
+                                  {% if 'Some_High_School' in ApplicantEducation %}
+                                  <td colspan="2">
+                                      <span class="check selected">&#10003;</span>
+                                      <span class="label">Some high school</span>
+                                  </td>
+                                  {% else %}
+                                  <td colspan="2">
+                                      <span class="check selected"></span>
+                                      <span class="label">Some high school</span>
+                                  </td>
+                                  {% endif %}
+                                  {% if 'PostSecondary_diploma' in ApplicantEducation %}
                                     <td colspan="2">
-                                        <span class="check selected"></span>
-                                        <span class="label" style="display: inline-block;">Some high school</span>
+                                        <span class="check selected">&#10003;</span>
+                                        <span class="label" style="display: inline-block;">Post-secondary diploma/degree (Which Program) </span>
+                                        <span class="brdr-btm" style="margin-top: .5em; display: inline-block; width: 40%;">&nbsp;{{ Program }}</span>
                                     </td>
+                                    {% else %}
                                     <td colspan="2">
-                                        <span class="check selected"></span>
-                                        <span class="label" style="display: inline-block;">Post-secondary diploma/degree (Area) </span>
-                                        <span class="brdr-btm" style="margin-top: .5em; display: inline-block; width: 40%;">&nbsp;{{ Area }}</span>
-                                    </td>
+                                      <span class="check selected"></span>
+                                      <span class="label">Post-secondary diploma/degree</span>
+                                  </td>
+                                  {% endif %}
                                 </tr>
                                 <tr>
-                                    <td colspan="2">
-                                        <span class="check selected"></span>
-                                        <span class="label" style="display: inline-block;">Grade 12 or GED </span>
-                                    </td>
-                                    <td colspan="2">
-                                        <span class="check selected"></span>
-                                        <span class="label" style="display: inline-block;">Trades Qualification (Which trade(s)) </span>
-                                        <span class="brdr-btm" style="margin-top: .5em; display: inline-block; width: 40%;">&nbsp;{{ Which_trades }}</span>
-                                    </td>
+                                  {% if 'Grade12_GED' in ApplicantEducation %}
+                                  <td colspan="2">
+                                      <span class="check ">&#10003;</span>
+                                      <span class="label">Grade 12 or GED</span>
+                                  </td>
+                                  {% else %}
+                                  <td colspan="2">
+                                      <span class="check "></span>
+                                      <span class="label">Grade 12 or GED</span>
+                                  </td>
+                                  {% endif %}
+                                  {% if 'Trades_Qualification' in ApplicantEducation %}
+                                  <td colspan="2">
+                                      <span class="check ">&#10003;</span>
+                                      <span class="label">Trades Qualification (Which trade(s))</span>
+                                      <span class="brdr-btm" style="margin-top: .5em; display: inline-block; width: 40%;">&nbsp;{{ WhichTrades }}</span>
+                                  </td>
+                                  {% else %}
+                                  <td colspan="2">
+                                      <span class="check "></span>
+                                      <span class="label">Trades Qualification (Which trade(s))</span>
+                                  </td>
+                                  {% endif %}
                                 </tr>
                                 <tr>
-                                    <td colspan="2">
-                                        <span class="check selected"></span>
-                                        <span class="label" style="display: inline-block;">Some Post-secondary </span>
-                                    </td>
-                                    <td colspan="2">
-                                        <span class="check selected"></span>
-                                        <span class="label" style="display: inline-block;">Apperentice </span>
-                                        <span class="brdr-btm" style="margin-top: .5em; display: inline-block; width: 40%;">&nbsp;{{ YearsofExp }}</span>
-                                        <span class="brdr-btm" style="margin-top: .5em; display: inline-block; width: 40%;">&nbsp;{{ YearsofExp }}</span>
-                                    </td>
+                                  {% if 'Some_postSecondary' in ApplicantEducation %}
+                                  <td colspan="2">
+                                      <span class="check ">&#10003;</span>
+                                      <span class="label">Some Post-secondary</span>
+                                  </td>
+                                  {% else %}
+                                  <td colspan="2">
+                                      <span class="check "></span>
+                                      <span class="label">Some Post-secondary</span>
+                                  </td>
+                                  {% endif %}
+                                  {% if 'Apprentice' in ApplicantEducation %}
+                                  <td colspan="2">
+                                      <span class="check ">&#10003;</span>
+                                      <span class="label">Apprentice</span>
+                                      <span class="brdr-btm" style="margin-top: .5em; display: inline-block; width: 40%;">&nbsp;{{ ApprenticeCertification.Trade }}</span>
+                                        <span class="brdr-btm" style="margin-top: .5em; display: inline-block; width: 40%;">&nbsp;{{ ApprenticeCertification.Year }}</span>
+                                  </td>
+                                  {% else %}
+                                  <td colspan="2">
+                                      <span class="check "></span>
+                                      <span class="label">Apprentice</span>
+                                  </td>
+                                  {% endif %}
                                 </tr>
                                 <tr>
                             </table>
@@ -685,14 +1072,28 @@
                         <table>
                             <tr>
                                     <h4> Are you willing to re-locate? </h4>
-                                    <td colspan="3">
+                                    {% if 'y' in AbleToRelocate %}
+                                        <td colspan="2">
+                                            <span class="check selected">&#10003;</span>
+                                            <span class="label">Yes</span>
+                                        </td>
+                                        {% else %}
+                                        <td colspan="2">
                                             <span class="check selected"></span>
-                                            <span class="label" style="display: inline-block;">Yes </span>
-                                    </td>
-                                    <td colspan="3">
+                                            <span class="label">Yes</span>
+                                        </td>
+                                        {% endif %}
+                                        {% if 'n' in AbleToRelocate %}
+                                        <td colspan="2">
+                                            <span class="check selected">&#10003;</span>
+                                            <span class="label">No</span>
+                                        </td>
+                                        {% else %}
+                                        <td colspan="2">
                                             <span class="check selected"></span>
-                                            <span class="label" style="display: inline-block;">No </span>
-                                    </td>
+                                            <span class="label">No</span>
+                                        </td>
+                                        {% endif %}
                                     <td colspan="3">
                                             <div>where</div>
                                             <span class="brdr-btm" style="margin-top: .5em; display: inline-block; width: 40%;">&nbsp;{{ PreferredLocation }} </span>
@@ -702,14 +1103,28 @@
                         <table>
                                 <h4> Would you work in a Camp Job? </h4>
                                  <tr>
-                                <td colspan="3">
+                                    {% if 'y' in AbleToWorkCampJob %}
+                                        <td colspan="2">
+                                            <span class="check selected">&#10003;</span>
+                                            <span class="label">Yes</span>
+                                        </td>
+                                        {% else %}
+                                        <td colspan="2">
                                             <span class="check selected"></span>
-                                            <span class="label" style="display: inline-block;">Yes </span>
-                                    </td>
-                                    <td colspan="3">
+                                            <span class="label">Yes</span>
+                                        </td>
+                                        {% endif %}
+                                        {% if 'n' in AbleToWorkCampJob %}
+                                        <td colspan="2">
+                                            <span class="check selected">&#10003;</span>
+                                            <span class="label">No</span>
+                                        </td>
+                                        {% else %}
+                                        <td colspan="2">
                                             <span class="check selected"></span>
-                                            <span class="label" style="display: inline-block;">No </span>
-                                    </td>
+                                            <span class="label">No</span>
+                                        </td>
+                                        {% endif %}
                                 </tr>
                         </table>
                         </td>
@@ -720,69 +1135,150 @@
                 <!-- end SECTION 8 -->
                 <!--  SECTION 9 -->
                 <table> 
-                <tbody>
-                        <tr class="bordered">
-                            <td colspan="4" style="padding: 0;">
-                              <table>
+                     <tbody>
+                        <tr class="section spacer"><td colspan="4">&nbsp;</td></tr>
+                             <tr class="bordered">
+                                 <td colspan="8" style="padding: 0;">
+                                     <table>
                                     <tr>
-                                        <td colspan="4">
+                                        <td colspan="8">
                                             <h4>Do you have skills from your hobbies or interests that could be transferred to a new job or role, such as: </h4>
                                         </td>
                                     </tr>
                                     <tr>
-                                        <td colspan="4">
-                                            <span class="check"></span>
+                                        {% if 'Plumbing' in HobbiesInterests %}
+                                        <td colspan="2">
+                                            <span class="check selected">&#10003;</span>
                                             <span class="label">Plumbing</span>
                                         </td>
-                                        <td colspan="4">
-                                            <span class="check"></span>
+                                        {% else %}
+                                        <td colspan="2">
+                                            <span class="check selected"></span>
+                                            <span class="label">Plumbing</span>
+                                        </td>
+                                        {% endif %}
+                                        {% if 'Wood framing structures' in HobbiesInterests %}
+                                        <td colspan="2">
+                                            <span class="check selected">&#10003;</span>
                                             <span class="label">Wood framing structures</span>
                                         </td>
-                                        <td colspan="4">
-                                            <span class="check"></span>
+                                        {% else %}
+                                        <td colspan="2">
+                                            <span class="check selected"></span>
+                                            <span class="label">Wood framing structures</span>
+                                        </td>
+                                        {% endif %}
+                                        {% if 'Welding' in HobbiesInterests %}
+                                        <td colspan="2">
+                                            <span class="check selected">&#10003;</span>
                                             <span class="label">Welding</span>
                                         </td>
-                                        <td colspan="4">
-                                            <span class="check"></span>
-                                            <span class="label">Other</span>
-                                            <span class="brdr-btm" style="margin-top: .5em; display: inline-block; width: 40%;">&nbsp;{{ Other1 }} </span>
+                                        {% else %}
+                                        <td colspan="2">
+                                            <span class="check selected"></span>
+                                            <span class="label">Welding</span>
                                         </td>
+                                        {% endif %}
+                                        {% if 'Other' in HobbiesInterests %}
+                                        <td colspan="2">
+                                            <span class="check selected">&#10003;</span>
+                                            <span class="label">Other</span>
+                                            <span class="brdr-btm" style="margin-top: .5em; display: inline-block; width: 40%;">&nbsp;{{ OtherHobbyWan }} </span>
+                                        </td>
+                                        {% else %}
+                                        <td colspan="2">
+                                            <span class="check selected"></span>
+                                            <span class="label">Other</span>
+                                        </td>
+                                        {% endif %}
+                                        {% if 'Other' in HobbiesInterests %}
+                                        <td colspan="2">
+                                            <span class="check selected">&#10003;</span>
+                                            <span class="label">Other</span>
+                                            <span class="brdr-btm" style="margin-top: .5em; display: inline-block; width: 40%;">&nbsp;{{ OtherHobbyTwo }} </span>
+                                        </td>
+                                        {% else %}
+                                        <td colspan="2">
+                                            <span class="check selected"></span>
+                                            <span class="label">Other</span>
+                                        </td>
+                                        {% endif %}
                                     </tr>
                                     <tr>
-                                        <td colspan="4">
-                                            <span class="check"></span>
+                                        {% if 'Electrical' in HobbiesInterests %}
+                                        <td colspan="2">
+                                            <span class="check selected">&#10003;</span>
                                             <span class="label">Electrical</span>
                                         </td>
-                                        <td colspan="4">
-                                            <span class="check"></span>
+                                        {% else %}
+                                        <td colspan="2">
+                                            <span class="check selected"></span>
+                                            <span class="label">Electrical</span>
+                                        </td>
+                                        {% endif %}
+                                        {% if 'Automotive repair' in HobbiesInterests %}
+                                        <td colspan="2">
+                                            <span class="check selected">&#10003;</span>
                                             <span class="label">Automotive repair</span>
                                         </td>
-                                        <td colspan="4">
-                                            <span class="check"></span>
+                                        {% else %}
+                                        <td colspan="2">
+                                            <span class="check selected"></span>
+                                            <span class="label">Automotive repair</span>
+                                        </td>
+                                        {% endif %}
+                                        {% if 'Concrete' in HobbiesInterests %}
+                                        <td colspan="2">
+                                            <span class="check selected">&#10003;</span>
                                             <span class="label">Concrete</span>
                                         </td>
-                                        <td colspan="4">
-                                            <span class="check"></span>
+                                        {% else %}
+                                        <td colspan="2">
+                                            <span class="check selected"></span>
+                                            <span class="label">Concrete</span>
+                                        </td>
+                                        {% endif %}
+                                        {% if 'Other' in HobbiesInterests %}
+                                        <td colspan="2">
+                                            <span class="check selected">&#10003;</span>
                                             <span class="label">Other</span>
                                             <span class="brdr-btm" style="margin-top: .5em; display: inline-block; width: 40%;">&nbsp;{{ Other2 }} </span>
                                         </td>
+                                        {% else %}
+                                        <td colspan="2">
+                                            <span class="check selected"></span>
+                                            <span class="label">Other</span>
+                                        </td>
+                                        {% endif %}
                                     </tr>
                                     <tr>
-                                        <td colspan="4">
-                                            <span class="check"></span>
+                                        {% if 'Carpentry' in HobbiesInterests %}
+                                        <td colspan="2">
+                                            <span class="check selected">&#10003;</span>
                                             <span class="label">Carpentry</span>
                                         </td>
-                                        <td colspan="4">
-                                            <span class="check"></span>
+                                        {% else %}
+                                        <td colspan="2">
+                                            <span class="check selected"></span>
+                                            <span class="label">Carpentry</span>
+                                        </td>
+                                        {% endif %}
+                                        {% if 'Machinery repair' in HobbiesInterests %}
+                                        <td colspan="2">
+                                            <span class="check selected">&#10003;</span>
                                             <span class="label">Machinery repair</span>
                                         </td>
+                                        {% else %}
+                                        <td colspan="2">
+                                            <span class="check selected"></span>
+                                            <span class="label">Machinery repair</span>
+                                        </td>
+                                        {% endif %}
                                     </tr>
+                                </table>
                                 </td>
                               </tr>
                          </tbody>
                     </table>
-
-            </div>
-
 </body>
 </html>
