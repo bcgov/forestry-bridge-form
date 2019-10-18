@@ -416,15 +416,15 @@
                                         {% endif %}
                                     </tr>
                                     <tr>
-                                        {% if 'None' in EquimentsTrained %}
+                                        {% if 'none' in EquimentsTrained %}
                                         <td colspan="2">
                                             <span class="check selected">&#10003;</span>
-                                            <span class="label">None of the above</span>
+                                            <span class="label">None</span>
                                         </td>
                                         {% else %}
                                         <td colspan="2">
                                             <span class="check selected"></span>
-                                            <span class="label">None of the above</span>
+                                            <span class="label">None</span>
                                         </td>
                                         {% endif %}
                                     </tr>
@@ -544,15 +544,15 @@
                                         {% endif %}
                                 </tr>
                                 <tr>
-                                    {% if 'None' in Certifications %}
+                                    {% if 'none' in Certifications %}
                                         <td colspan="2">
                                             <span class="check selected">&#10003;</span>
-                                            <span class="label">None of the above</span>
+                                            <span class="label">None</span>
                                         </td>
                                         {% else %}
                                         <td colspan="2">
                                             <span class="check selected"></span>
-                                            <span class="label">None of the above</span>
+                                            <span class="label">None</span>
                                         </td>
                                         {% endif %}
                                 </tr>
@@ -641,15 +641,15 @@
                                         {% endif %}
                                 </tr>
                                 <tr>
-                                    {% if 'None' in ExperienceArea %}
+                                    {% if 'none' in ExperienceArea %}
                                         <td colspan="2">
                                             <span class="check selected">&#10003;</span>
-                                            <span class="label">None of the above</span>
+                                            <span class="label">None</span>
                                         </td>
                                         {% else %}
                                         <td colspan="2">
                                             <span class="check selected"></span>
-                                            <span class="label">None of the above</span>
+                                            <span class="label">None</span>
                                         </td>
                                         {% endif %}
                                 </tr>
@@ -733,18 +733,20 @@
                                         <span class="label">Other</span>
                                     </td>
                                     {% endif %}
-                                    {% if 'None' in DrivingExp %}
+                                    </tr>
+                                    <tr>
+                                    {% if 'none' in DrivingExp %}
                                     <td colspan="2">
                                         <span class="check ">&#10003;</span>
-                                        <span class="label">None of the above</span>
+                                        <span class="label">None</span>
                                     </td>
                                     {% else %}
                                     <td colspan="2">
                                         <span class="check "></span>
-                                        <span class="label">None of the above</span>
+                                        <span class="label">None</span>
                                     </td>
                                     {% endif %}
-                                </tr>
+                                    </tr>
                                 <tr>
                             </table>
                             </td>
@@ -958,8 +960,20 @@
                                               <span class="check "></span>
                                               <span class="label">Head Rig Operator</span>
                                           </td>
-                                        </tr>
                                           {% endif %}
+                                          </tr>
+                                          <tr>
+                                          {% if 'none' in SawmillTrained%}
+                                            <td colspan="2">
+                                                <span class="check ">&#10003;</span>
+                                                <span class="label">None</span>
+                                            </td>
+                                            {% else %}
+                                            <td colspan="2">
+                                                <span class="check "></span>
+                                                <span class="label">None</span>
+                                            </td>
+                                          {% endif %}</tr>
                                         </table>
                                     </td>
                                 </tr>
@@ -1054,7 +1068,19 @@
                                       <span class="check "></span>
                                       <span class="label">Apprentice</span>
                                   </td>
-                                  {% endif %}
+                                  {% endif %}</tr>
+                                  <tr>
+                                  {% if 'none' in ApplicantEducation %}
+                                    <td colspan="2">
+                                        <span class="check ">&#10003;</span>
+                                        <span class="label">None</span>
+                                    </td>
+                                    {% else %}
+                                    <td colspan="2">
+                                        <span class="check "></span>
+                                        <span class="label">None</span>
+                                    </td>
+                                    {% endif %}
                                 </tr>
                                 <tr>
                             </table>
@@ -1272,6 +1298,17 @@
                                         <td colspan="2">
                                             <span class="check selected"></span>
                                             <span class="label">Machinery repair</span>
+                                        </td>
+                                        {% endif %}
+                                        {% if 'none' in HobbiesInterests %}
+                                        <td colspan="2">
+                                            <span class="check ">&#10003;</span>
+                                            <span class="label">None</span>
+                                        </td>
+                                        {% else %}
+                                        <td colspan="2">
+                                            <span class="check "></span>
+                                            <span class="label">None</span>
                                         </td>
                                         {% endif %}
                                     </tr>

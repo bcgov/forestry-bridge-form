@@ -35,23 +35,23 @@ export class SurveyPrimaryComponent implements OnInit {
         this.surveyPath = routeData.survey_path;
         this.surveyJson = routeData.survey;
         this.cacheName = routeData.cache_name;
-        if('show_sidebar' in routeData)
+        if ('show_sidebar' in routeData)
             this.showSidebar = routeData.show_sidebar;
         this.complete = (data) => this.onComplete(data);
         let hash = this.route.snapshot.fragment;
-        if(hash === 'print')
+        if (hash === 'print')
             this.initialMode = 'print';
     }
 
     onComplete(data) {
         let path = this.route.snapshot.url[0].path;
-        if(path === 'qualify') {
+        if (path === 'qualify') {
             console.log(data);
             let ok = (data.PORConfirmed && data.PORConfirmed[0] === 'confirmed') ? 'qualified' : 'unqualified';
             this.router.navigate(['result', ok]);
         }
-        else if(this.cacheName) {
-            if(data) {
+        else if (this.cacheName) {
+            if (data) {
                 this.showPrintable(data);
             } else {
                 this.printUrl = null;
@@ -61,36 +61,36 @@ export class SurveyPrimaryComponent implements OnInit {
     }
 
     showPrintable(data) {
-        let formatName = function(nm) {
-            if (! nm) return '';
+        let formatName = function (nm) {
+            if (!nm) return '';
             return (((nm.first || '') + ' ' + (nm.middle || '')).trim() + ' ' + (nm.last || '')).trim();
         }
-        let formatDate = function(date) {
-            if (! date) return '';
+        let formatDate = function (date) {
+            if (!date) return '';
             var monthArray = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
             let dateVal = new Date(date + " 12:00:00Z");
             var dd = dateVal.getDate();
             var month = dateVal.getMonth();
             var yyyy = dateVal.getFullYear();
-            return monthArray[month]+"/"+dd+"/"+yyyy;
+            return monthArray[month] + "/" + dd + "/" + yyyy;
         }
-        let joinResults = function(results, joiner) {
-            if (! joiner) joiner = " and ";
-            if (! results || ! results.length) return '';
+        let joinResults = function (results, joiner) {
+            if (!joiner) joiner = " and ";
+            if (!results || !results.length) return '';
             if (results.length == 1) return results[0];
-            let start = results.length > 2 ? results.slice(0, results.length-1).join(", ") + "," : results[0];
-            return start + joiner + results[results.length-1];
+            let start = results.length > 2 ? results.slice(0, results.length - 1).join(", ") + "," : results[0];
+            return start + joiner + results[results.length - 1];
         }
-        let addDictEntry = function(dict, key, value) {
-            if(! (key in dict)) dict[key] = [];
+        let addDictEntry = function (dict, key, value) {
+            if (!(key in dict)) dict[key] = [];
             dict[key].push(value);
         }
-        let flattenDict = function(dict) {
+        let flattenDict = function (dict) {
             var result = [];
-            for(var key in dict) {
+            for (var key in dict) {
                 var uniq = [];
-                for(let val of dict[key]) {
-                    if(! ~uniq.indexOf(val))
+                for (let val of dict[key]) {
+                    if (! ~uniq.indexOf(val))
                         uniq.push(val);
                 }
                 result.push({
@@ -108,15 +108,15 @@ export class SurveyPrimaryComponent implements OnInit {
             "1pm": "at least once a month",
             "1py": "at least once a year"
         };
-        let flattenTimesDict = function(timesDict) {
+        let flattenTimesDict = function (timesDict) {
             var result = [];
-            for(var key in timesDict) {
+            for (var key in timesDict) {
                 result.push({
                     time: timesTranslate[key] || key,
                     names: joinResults(timesDict[key], " and ")
                 });
             }
-            result.sort(function(a, b) { return a.time.localeCompare(b.time); });
+            result.sort(function (a, b) { return a.time.localeCompare(b.time); });
             return result;
         }
         var socialTranslate = {
@@ -365,7 +365,7 @@ export class SurveyPrimaryComponent implements OnInit {
 
         this.resultJson = JSON.stringify(data);
 
-        // console.log("resultJson is: " + this.resultJson);
+        console.log("resultJson is: " + this.resultJson);
 
         this.resultJson = JSON.stringify(data);
         this.jsonObject = JSON.parse(this.resultJson);
