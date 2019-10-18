@@ -81,9 +81,7 @@ class SurveyPdfView(generics.GenericAPIView):
         email_inbox = os.getenv('EMAIL_INBOX')
         email_from_address = os.getenv('EMAIL_SENDER')
         subject = getConfirmationMessageSubject(tracking_code)
-        messageBody = getConfirmationMessageBody()
-
-         
+        messageBody = getConfirmationMessageBody() 
         email = EmailMessage(subject, messageBody, email_from_address, [email_inbox])
 
         responses = json.loads(request.POST['data'])
@@ -107,7 +105,5 @@ class SurveyPdfView(generics.GenericAPIView):
 
         # send email
         email.send()
-
-
 
         return JsonResponse({'ok': True, 'tracking_code': tracking_code})
