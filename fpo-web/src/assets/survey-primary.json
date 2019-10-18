@@ -272,8 +272,8 @@
                             "isRequired": true,
                             "choices": [
                                 {
-                                    "value": "Planner",
-                                    "text": "Planner"
+                                    "value": "Planer",
+                                    "text": "Planer"
                                 },
                                 {
                                     "value": "Sawmill",
@@ -297,10 +297,10 @@
                         },
                         {
                             "type": "text",
-                            "name": "YrsOfPlanner",
+                            "name": "YrsOfPlaner",
                             "visible": false,
-                            "visibleIf": "{ExperienceArea} contains \"Planner\"",
-                            "title": "Planner: Number of Years",
+                            "visibleIf": "{ExperienceArea} contains \"Planer\"",
+                            "title": "Planer: Number of Years",
                             "isRequired": true
                         },
                         {
