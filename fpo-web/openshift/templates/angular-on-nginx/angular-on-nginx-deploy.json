@@ -191,6 +191,9 @@
         "name": "${NAME}-siteminder-route",
         "labels": {
           "app": "${NAME}-siteminder-route"
+        },
+        "annotations": {
+          "haproxy.router.openshift.io/disable_cookies": "true"
         }
       },
       "spec": {
