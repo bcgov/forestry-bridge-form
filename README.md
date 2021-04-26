@@ -1,3 +1,5 @@
+[![img](https://img.shields.io/badge/Lifecycle-Dormant-ff7f2a)](https://github.com/bcgov/repomountie/blob/master/doc/lifecycle-badges.md)
+
 # Forester-Job-Placement Order Form
 
 __This is a fork version for [Family-Protection-Order]( https://github.com/bcgov/Family-Protection-Order )__
